@@ -1,0 +1,491 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+/* general text formatting */
+h1, h2, h3, nav, footer {
+ font-family: Lobster, Cambria, "Times New Roman", serif;
+}
+body {
+   font-family: "Open Sans", Verdana, Arial, sans-serif;
+   font-size: 100%;
+   background-color: #E8EAF6;
+   margin: 0;
+   padding: 0;
+}
+
+
+/* header and navigation */
+header, footer {
+  color: white;
+  background-color: #1A237E;
+  margin: 0em 4em 0.25em 4em;
+  border-radius: 8px 8px 0 0;
+}
+header h1 { 
+  padding: 1rem 0 0 1.25rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+header p { 
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  padding: 0 0 1rem 1.25rem;
+  margin-top: 0.5rem;
+}
+
+
+/* main article styling */
+main {
+   background-color: white; /* 大section為白色背景 */
+   margin: 0em 4em 1em 4em;
+   padding: 0;
+   border-radius: 0 0 8px 8px;
+   overflow: hidden;
+}
+
+section {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+}
+
+
+
+/* Main form container - 添加margin使其缩小，显示白色背景 */
+form {
+  padding: 20px;
+  background-color: #C5CAE9; /* 整个form背景为C5C4E9 */
+  border-radius: 8px;
+  margin: 30px; /* 添加3px边距显示白色背景 */
+}
+
+
+form h2 {
+  background-color: #7986CB;
+  color: #E8EAF6;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 15px 20px;
+  margin: -20px -20px 20px -20px; /* 负边距使其延伸到form的padding区域 */
+  letter-spacing: 1px;
+  border-radius: 8px 8px 0 0;
+  font-family: "Times New Roman", Georgia, serif; /* Times New Roman优先 */
+}
+
+/* Title Section */
+.title-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.title-section label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.title-section input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #9FA8DA;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  background-color: #F8F9FF;
+  box-sizing: border-box;
+  display: block;
+}
+
+.title-section input:focus {
+  outline: none;
+  border-color: #7986CB;
+  box-shadow: 0 0 8px rgba(121, 134, 203, 0.5);
+}
+
+/* Description Section */
+.description-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.description-section label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.description-section textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #9FA8DA;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  background-color: #F8F9FF;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 120px;
+  display: block;
+}
+
+.description-section textarea:focus {
+  outline: none;
+  border-color: #7986CB;
+  box-shadow: 0 0 8px rgba(121, 134, 203, 0.5);
+}
+
+/* 通用输入框样式 - 应用到Date Taken和Time Taken */
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+.text-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #9FA8DA;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  background-color: #F8F9FF;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus,
+.text-input:focus {
+  outline: none;
+  border-color: #7986CB;
+  box-shadow: 0 0 8px rgba(121, 134, 203, 0.5);
+}
+
+/* Color input styling */
+input[type="color"] {
+  width: 70px;
+  height: 50px;
+  padding: 2px;
+  border: 2px solid #9FA8DA;
+  border-radius: 6px;
+  vertical-align: middle;
+  margin-right: 15px;
+  background-color: #C5CAE9;
+  cursor: pointer;
+}
+
+/* Location and Copyright section */
+.location-copyright-section {
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Copyright section - 修改为无边框，作为容器 */
+.copyright-section {
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+}
+
+/* 修改Copyright标题样式 */
+.copyright-section p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* 单选框组 - 垂直排列并添加边框 */
+.copyright-section .radio-group {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #C5CAE9;
+  border-radius: 8px;
+  border: 2px solid #7986CB;
+}
+
+.copyright-section .radio-group p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+.copyright-section .radio-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: normal;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333;
+}
+
+/* 修改单选框间距，让文字更贴近 */
+.copyright-section .radio-group input[type="radio"] {
+  margin-right: 5px;
+  vertical-align: middle;
+  transform: scale(1.2);
+}
+
+/* 复选框组 - 垂直排列并添加边框 */
+.copyright-section .checkbox-group {
+  margin: 0;
+  padding: 15px;
+  background-color: #C5CAE9;
+  border-radius: 8px;
+  border: 2px solid #7986CB;
+}
+
+.copyright-section .checkbox-group p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+.copyright-section .checkbox-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: normal;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333;
+}
+
+/* 修改复选框间距，让文字更贴近 */
+.copyright-section .checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: middle;
+  transform: scale(1.2);
+}
+
+/* Rate & Color (Left) and Date & Time (Right) Section */
+.rate-date-section {
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Bordered sections for Rate/Color and Date/Time */
+.bordered-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #9FA8DA;
+  height: 100%;
+}
+
+/* Rate and Color section (left) */
+.rate-color-section {
+  background-color: #C5CAE9;
+}
+
+/* Date and Time section (right) - 修改为与Copyright相同的有边框样式 */
+.date-time-section {
+  background-color: #C5CAE9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #7986CB;
+}
+
+/* Color container */
+.color-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Color palette display */
+.color-palette {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.color-box {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* License section - 獨立為一個整體的section */
+.license-section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #9FA8DA;
+  border-radius: 8px;
+}
+
+.license-section input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: middle;
+  transform: scale(1.5);
+}
+
+.license-section label {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* Left column */
+.left-column {
+  width: 50%;
+  float: left;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.left-column .form-row {
+  margin-bottom: 20px;
+}
+
+/* Right column */
+.right-column {
+  width: 50%;
+  float: right;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.right-column .form-row {
+  margin-bottom: 20px;
+}
+
+/* Clear float */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Button section */
+.button-section {
+  padding: 30px 20px;
+  background-color: #9FA8DA;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 2px solid #7986CB;
+}
+
+.rounded {
+  padding: 16px 40px;
+  margin: 0 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  color: white;
+  background-color: #E91E63;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.rounded:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  background-color: #F8F9FF;
+}
+
+/* Placeholder styling */
+::placeholder {
+  color: #888;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Number input specific styling */
+input[type="number"] {
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Select dropdown styling */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239FA8DA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 18px;
+  padding-right: 50px;
+}
+
+/* Form row styling for two-column layout */
+.form-row {
+  margin-bottom: 20px;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Date Taken和Time Taken的输入框样式 */
+.date-time-section .form-row input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #9FA8DA;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  background-color: #F8F9FF;
+  box-sizing: border-box;
+  display: block;
+}
+
+.date-time-section .form-row input[type="text"]:focus {
+  outline: none;
+  border-color: #7986CB;
+  box-shadow: 0 0 8px rgba(121, 134, 203, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  header, footer, main {
+    margin: 0.5em;
+  }
+  
+  .left-column,
+  .right-column {
+    width: 100%;
+    float: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .button-section {
+    padding: 20px 10px;
+  }
+  
+  .rounded {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 14px 20px;
+  }
+}

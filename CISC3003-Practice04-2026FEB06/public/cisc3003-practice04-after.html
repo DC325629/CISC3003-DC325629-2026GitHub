@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>CISC3003: Practice 04</title>
+   <link rel="stylesheet" href="css/reset.css" />
+   <link rel="stylesheet" href="css/cisc3003-practice04.css" />
+</head>
+<body>
+<header>
+     <h1>Share Your Travels</h1>
+     <p>let us know where you've been</p>
+</header>
+<main>
+   <section>
+      <form action="#" method="post">
+         <!-- Form标题 -->
+         <h2>PHOTO DETAILS</h2>
+         
+         <!-- Title Section -->
+         <div class="title-section">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Give your photo a descriptive name" />
+         </div>
+         
+         <!-- Description Section -->
+         <div class="description-section">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="5" placeholder="Adding a rich description will help with search results"></textarea>
+         </div>
+         
+         <!-- Continent, Country, City and Copyright Section -->
+         <div class="clearfix location-copyright-section">
+            <!-- Left Column: Location -->
+            <div class="left-column location-section">
+               <div class="form-row">
+                  <label for="continent">Continent</label>
+                  <select id="continent" name="continent">
+                     <option value="">Choose continent</option>
+                     <option value="africa">Africa</option>
+                     <option value="asia">Asia</option>
+                     <option value="europe">Europe</option>
+                     <option value="north-america">North America</option>
+                     <option value="south-america">South America</option>
+                  </select>
+               </div>
+               <div class="form-row">
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                     <option value="">Choose country</option>
+                     <option value="canada">Canada</option>
+                     <option value="mexico">Mexico</option>
+                     <option value="usa">United States</option>
+                  </select>
+               </div>
+               <div class="form-row">
+                  <label for="city">City</label>
+                  <select id="city" name="city">
+                     <option value="">Choose city</option>
+                     <option value="calgary">Calgary</option>
+                     <option value="montreal">Montreal</option>
+                     <option value="toronto">Toronto</option>
+                     <option value="vancouver">Vancouver</option>
+                  </select>
+               </div>
+            </div>
+            
+            <!-- Right Column: Copyright -->
+            <div class="right-column copyright-section">
+               <div class="form-row">
+                  <div class="radio-group">
+                  <p>Copyright?</p>
+                     <input type="radio" id="all-rights" name="copyright" value="all-rights" checked>
+                     <label for="all-rights">All rights reserved</label>
+                     <input type="radio" id="creative-commons" name="copyright" value="creative-commons">
+                     <label for="creative-commons">Creative Commons</label>
+                  </div>
+               </div>
+               
+               <div class="checkbox-group">
+                  <p>Creative Commons Types:</p>
+                  <input type="checkbox" id="cc-attribution" name="cc[]" value="attribution">
+                  <label for="cc-attribution">Attribution</label>
+                  <input type="checkbox" id="cc-noncommercial" name="cc[]" value="noncommercial">
+                  <label for="cc-noncommercial">Noncommercial</label>
+                  <input type="checkbox" id="cc-noderivative" name="cc[]" value="noderivative">
+                  <label for="cc-noderivative">No Derivative Works</label>
+               </div>
+            </div>
+         </div>
+         <div class="license-section">
+            <label for="license">I accept the software license</label>
+            <input type="checkbox" id="license" name="license" value="accepted">
+         </div>
+         
+         <!-- Rate & Color (Left) and Date & Time (Right) Section -->
+         <div class="clearfix rate-date-section">
+            <!-- Left Column: Rate and Color -->
+            <div class="left-column rate-color-section">
+               <div class="form-row">
+                  <label for="rate">Rate this photo:</label>
+                  <input type="number" id="rate" name="rate" min="1" max="5" />
+               </div>
+               <div class="form-row">
+                  <label for="color">Color Collection:</label>
+                  <div class="color-container">
+                     <input type="color" id="color" name="color" value="#E8EAF6" />
+                  </div>
+               </div>
+            </div>
+            
+            <!-- Right Column: Date and Time -->
+
+			<div class="right-column date-time-section">
+ 				 <div class="form-row">
+   				 <label for="date">Date Taken:</label>
+   				 <input type="text" id="date" name="date" placeholder="mm / dd / yyyy" />
+ 				 </div>
+  			<div class="form-row">
+    			<label for="time">Time Taken:</label>
+    			<input type="text" id="time" name="time" placeholder="-- : -- --" />
+  			</div>
+		</div>
+
+         </div>
+         
+         <!-- Button Section -->
+         <div class="button-section">
+            <input type="submit" value="送出查詢" class="rounded">
+            <input type="reset" value="Clear Form" class="rounded">
+         </div>
+      </form>
+   </section>
+</main>  
+<footer>
+  <p>CISC3003 Web Programming - 2026: DC325629 + LAM KA WAI</p>
+</footer>
+</body>
+</html>
