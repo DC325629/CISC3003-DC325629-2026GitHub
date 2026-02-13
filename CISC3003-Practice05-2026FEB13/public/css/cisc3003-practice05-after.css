@@ -1,0 +1,200 @@
+/* ---------- 任务1：页头标题居中覆盖 + 黑白调暗 ---------- */
+header {
+    position: relative;
+    line-height: 0;
+}
+
+header img.banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(1) brightness(0.4); /* 黑白 + 调暗 */
+}
+header h1 {
+    font-size: 48px;
+}
+header h2 {
+    font-size: 36px;
+}
+.banner--title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Start 按钮：恢复原始样式，仅增加上下内边距 */
+.banner--title span {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.4);   /* 保留半透明背景（原要求未取消） */
+    text-align: center;
+    margin-top: 10px;
+    font-size: 26px;                  /* 恢复24px */                   /* 恢复固定宽度 */
+    padding: 28px 12px;                 /* 上下内边距增至12px，左右保持9px */
+    border: 1px solid white;           /* 恢复1px白边框 */
+}
+
+.banner--title span a {
+    color: white;
+    text-decoration: underline;             /* 移除下划线 */
+}
+
+.highlights {
+    max-width: 1200px;            /* 与马赛克容器宽度一致 */
+    margin: 30px auto;            /* 居中 */
+    overflow: hidden;             /* 清除浮动 */
+    padding: 0;                   /* 无内边距，确保卡片左边缘与父容器左边缘对齐 */
+    box-sizing: border-box;
+
+}
+
+.highlights h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    padding-left: 0;
+    border-bottom: 2px solid #333;   /* 下划线粗细2px，深灰色，可自定义 */
+    padding-bottom: 8px;              /* 文字与下划线的间距 */
+}
+
+/* 两个亮点容器：宽度580px，并排，10px间隙 */
+.highlights--container {
+    float: left;
+    width: 580px;                 /* 与马赛克大图同宽 */
+    margin-right: 10px;
+    border-radius: 1px;
+    padding: 0;                   /* 移除内边距，符合要求 */
+    box-sizing: border-box;
+}
+
+.highlights--container:last-child {
+    margin-right: 0;
+}
+
+/* 内部图片区域：固定285x190，与马赛克小图同尺寸、同位置 */
+.highlights--media {
+    float: left;
+    width: 285px;
+    height: 190px;
+    margin-right: 0;              /* 移除右边距，间隙由文字区域的 margin-left 实现 */
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.highlights--media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;            /* 填满容器 */
+    display: block;
+}
+
+/* 文字区域：左外边距为图片宽+间隙（295px），使其左边缘与马赛克第二列图片左边缘对齐 */
+.highlights--text {
+    margin-left: 295px;           
+    position: relative;          
+    min-height: 190px;             
+    padding-bottom: 40px;        
+    box-sizing: border-box;
+}
+
+/* 重置文字内部边距 */
+.highlights--text h4,
+.highlights--text p {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.highlights--text h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;           
+}
+
+.highlights--text p {
+    margin: 5px 0;
+}
+
+/* 按钮绝对定位在右下角，橙色背景 */
+.highlights--button {
+    position: absolute;
+    bottom: 0px;                 /* 距离底部10px */
+    right: 0px;                  /* 距离右边10px */
+    background: #FFBF00;          /* 橙色背景 */
+    color: white;                 /* 白色文字 */
+    padding: 6px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.highlights--button:hover {
+    background: #cc5500;          /* 悬停时稍深的橙色 */
+}
+
+@media (max-width: 1220px) {
+    .highlights--container {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* ---------- 任务3：马赛克区域绝对定位 ---------- */
+.mosaic {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 1250px;               /* 根据项目位置手动设定高度 */
+    margin: 30px auto;
+}
+
+/* 所有马赛克项目：绝对定位，图片填满 */
+.mosaic-item {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.mosaic-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;            /* 确保图片完全填充格子 */
+}
+
+/* 尺寸定义：小图 285x190，大图 580x390 */
+.mosaic--a, .mosaic--j{
+    width: 580px;
+    height: 390px;
+}
+
+.mosaic--b, .mosaic--c,.mosaic--f, .mosaic--g,.mosaic--i, .mosaic--k   {
+    width: 285px;
+    height: 190px;
+}
+.mosaic--d, .mosaic--h,.mosaic--e {
+    width: 285px;
+    height: 390px;
+}
+
+/* 逐个定位，形成网格（10px间隙） */
+.mosaic--a { left: 0; top: 0; }
+.mosaic--b { left: 590px; top: 0; }       
+.mosaic--c { left: 590px; top: 200px; }        
+.mosaic--d { left: 885px; top: 0px; }         
+.mosaic--e { left: 0px; top: 400px; }
+.mosaic--f { left: 295px; top: 400px; }      
+.mosaic--g { left: 590px; top: 400px; }         
+.mosaic--h { left: 885px; top: 400px; }
+.mosaic--i { left: 0; top: 800px; }
+.mosaic--j { left: 295px; top: 600px; }         
+.mosaic--k { left: 885px; top: 800px; }
+
+/* 底部留白 */
+.mosaic {
+    margin-bottom: 40px;
+}
