@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lam Ka Wai - Demo Store (UrbanCart Layout)</title>
+    <link rel="stylesheet" href="css/cisc3003-SugEx04-demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="cisc3003-sugEx04-home.html" class="logo">
+                Lam Ka Wai
+                <img src="images/Michaels-Logo.png" alt="Michaels Logo" class="logo-img">
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="cisc3003-SugEx04-home.html">Home</a></li>
+                <li><a href="cisc3003-SugEx04-profile.html">Profile</a></li>
+                <li><a href="cisc3003-SugEx04-summary.html">Summary</a></li>
+                <li><a href="cisc3003-SugEx04-showcase.html">Showcase</a></li>
+                <li><a href="cisc3003-SugEx04-qualification.html">Qualifications</a></li>
+                <li><a href="cisc3003-SugEx04-demo.html" class="active">Demo</a></li>
+            </ul>
+            <details class="mobile-menu">
+                <summary>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </summary>
+                <ul>
+                    <li><a href="cisc3003-SugEx04-home.html" class="active">Home</a></li>
+                    <li><a href="cisc3003-SugEx04-profile.html">Profile</a></li>
+                    <li><a href="cisc3003-SugEx04-summary.html">Summary</a></li>
+                    <li><a href="cisc3003-SugEx04-showcase.html">Showcase</a></li>
+                    <li><a href="cisc3003-SugEx04-qualification.html">Qualifications</a></li>
+                    <li><a href="cisc3003-SugEx04-demo.html" class="active">Demo</a></li>
+                </ul>
+            </details>
+        </div>
+    </nav>
+
+    <main class="page-container" id="home">
+        <!-- ===== 英雄區塊 (UrbanCart 內容) ===== -->
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1 class="hero-title">Fresh styles, <span class="highlight">delivered.</span></h1>
+                <p class="hero-subtitle">Discover the latest trends in tech, fashion and home.</p>
+                <a href="#feature-products" class="btn btn-primary">Shop now</a>
+            </div>
+        </section>
+
+        <!-- 分類展示 -->
+        <section id="categories" class="categories-section">
+            <div class="section-header">
+                <h2>Shop by category</h2>
+                <p>Find exactly what you need</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="images/category-1.jpg" alt="Electronics">
+                    <h3>sports</h3>
+                </div>
+                <div class="category-card">
+                    <img src="images/category-2.jpg" alt="Fashion">
+                    <h3>Fashion</h3>
+                </div>
+                <div class="category-card">
+                    <img src="images/category-3.jpg" alt="Home & living">
+                    <h3>Home and Living</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- 優勢特點 -->
+        <section id="benefits" class="benefits-section">
+            <div class="section-header">
+                <h2>Why shop with us</h2>
+                <p>three simple reasons</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <img src="images/buy-1.jpg" alt="Secure payment">
+                    <h3>Secure payments</h3>
+                    <p>128‑bit SSL encryption</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="images/buy-2.jpg" alt="Fast delivery">
+                    <h3>Fast delivery</h3>
+                    <p>2‑3 business days</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="images/buy-3.jpg" alt="24/7 support">
+                    <h3>24/7 friendly support</h3>
+                    <p>chat or email</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 精選產品 -->
+        <section id="feature-products" class="products-section bg-light">
+            <div class="section-header">
+                <h2>Featured products</h2>
+                <p>top picks from our store</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="images/product-1.jpg" alt="Noise-cancelling headphones">
+                    <h3>T-shirts</h3>
+                    <div class="price">$89.99</div>
+                    <div class="rating">★★★★☆ (4.2)</div>
+                </div>
+                <div class="product-card">
+                    <img src="images/product-2.jpg" alt="Smart watch">
+                    <h3>sneakers</h3>
+                    <div class="price">$129.00</div>
+                    <div class="rating">★★★★★ (5.0)</div>
+                </div>
+                <div class="product-card">
+                    <img src="images/product-3.jpg" alt="Wireless earbuds">
+                    <h3>jeans</h3>
+                    <div class="price">$59.99</div>
+                    <div class="rating">★★★★☆ (4.5)</div>
+                </div>
+                <div class="product-card">
+                    <img src="images/product-4.jpg" alt="Sneakers">
+                    <h3>puma T-shirts</h3>
+                    <div class="price">$74.50</div>
+                    <div class="rating">★★★★☆ (4.0)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新到貨 -->
+        <section id="latest-products" class="products-section">
+            <div class="section-header">
+                <h2>Latest arrivals</h2>
+                <p>fresh out of the box</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="images/product-5.jpg" alt="Leather backpack">
+                    <h3>shoes</h3>
+                    <div class="price">$89.99</div>
+                    <div class="rating">★★★★☆ (4.3)</div>
+                </div>
+                <div class="product-card">
+                    <img src="images/product-6.jpg" alt="Ceramic mug">
+                    <h3>T-shirts</h3>
+                    <div class="price">$14.90</div>
+                    <div class="rating">★★★★★ (4.9)</div>
+                </div>
+                <div class="product-card">
+                    <img src="images/product-7.jpg" alt="Desk lamp">
+                    <h3>sock</h3>
+                    <div class="price">$39.95</div>
+                    <div class="rating">★★★☆☆ (3.8)</div>
+                </div>
+                <div class="product-card">
+                    <img src="images/product-8.jpg" alt="Sunglasses">
+                    <h3>watch</h3>
+                    <div class="price">$54.25</div>
+                    <div class="rating">★★★★☆ (4.1)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 為您推薦 -->
+        <section id="recommended" class="products-section bg-light">
+            <div class="section-header">
+                <h2>Recommended for you</h2>
+                <p>based on your views</p>
+            </div>
+            <div class="products-grid three-cols">
+                <div class="product-card">
+                    <img src="images/product-9.jpg" alt="Yoga mat">
+                    <h3>watch</h3>
+                    <div class="price">$32.00</div>
+                    <div class="rating">★★★★☆ (4.6)</div>
+                </div>
+                <div class="product-card">
+                    <img src="images/product-10.jpg" alt="Blender">
+                    <h3>sneakers</h3>
+                    <div class="price">$47.90</div>
+                    <div class="rating">★★★★☆ (4.4)</div>
+                </div>
+                <div class="product-card">
+                    <img src="images/product-11.jpg" alt="Power bank">
+                    <h3>shoes</h3>
+                    <div class="price">$29.99</div>
+                    <div class="rating">★★★★★ (5.0)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特別優惠 -->
+        <section id="product-offer" class="offer-section">
+            <div class="offer-container">
+                <div class="offer-image">
+                    <img src="images/product-12.jpg" alt="Exclusive smart speaker">
+                </div>
+                <div class="offer-details">
+                    <span class="offer-badge">limited edition</span>
+                    <h2>sports joggers</h2>
+                    <p class="offer-description">Exclusive white‑gloss finish </p>
+                    <div class="offer-price">$79.99 <span class="old-price">$129.99</span></div>
+                    <a href="#" class="btn btn-primary">grab the offer</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 品牌畫廊 -->
+        <section id="gallery" class="gallery-section">
+            <div class="section-header">
+                <h2>Behind the brand</h2>
+                <p>moments from our store and team</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="images/gallery-1.jpg" alt="Store front" class="gallery-img">
+                <img src="images/gallery-2.jpg" alt="Team unpacking" class="gallery-img">
+                <img src="images/gallery-3.jpg" alt="Customer happy" class="gallery-img">
+                <img src="images/gallery-4.jpg" alt="Packaging" class="gallery-img">
+            </div>
+        </section>
+
+        <!-- 顧客評價 -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="section-header">
+                <h2>What our customers say</h2>
+                <p>real feedback from real people</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="images/user-1.png" alt="Customer" class="testimonial-img">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">“Fast shipping and the headset is amazing. Totally worth it!”</p>
+                    <h3>– Alex Chen</h3>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/user-2.png" alt="Reviewer profile" class="testimonial-img">
+                    <div class="testimonial-rating">★★★★☆</div>
+                    <p class="testimonial-text">“I love the design, and the customer support helped me immediately.”</p>
+                    <h3>– Jamie L.</h3>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/user-3.png" alt="Customer" class="testimonial-img">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">“The backpack is high quality, exactly as described. 10/10.”</p>
+                    <h3>– Morgan Smith</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="brands" class="brands-section">
+            <div class="section-header">
+                <h2>Brands we love</h2>
+                <p>official partners and top suppliers</p>
+            </div>
+            <div class="brands-grid">
+                <img src="images/logo.png" alt="Brand 1">
+                <img src="images/logo-coca-cola.png" alt="Brand 2">
+                <img src="images/logo-oppo.png" alt="Brand 5">
+                <img src="images/logo-paypal.png" alt="Brand 6">
+                <img src="images/logo-philips.png" alt="Brand 7">
+                <img src="images/logo-white.png" alt="Brand 8">
+                <img src="images/logo-godrej.png" alt="Brand 9">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Download Our App</h3>
+                <p>iOS and Android coming soon</p>
+                <div class="app-badge">
+                    <img src="images/app-store.png" alt="App Store" style="height:20px; vertical-align:middle;">
+                </div>
+                <div class="app-badge">
+                    <img src="images/play-store.png" alt="Google Play" style="height:20px; vertical-align:middle;">
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Our Logo</h4>
+                <img src="images/Michaels-Logo.png" alt="Logo" class="footer-logo-img">
+                <p style="margin-top:0.5rem;">since 2026</p>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="cisc3003-SugEx04-home.html">Home</a></li>
+                    <li><a href="cisc3003-SugEx04-profile.html">Profile</a></li>
+                    <li><a href="cisc3003-SugEx04-qualification.html">CV</a></li>
+                    <li><a href="cisc3003-SugEx04-showcase.html">Showcase</a></li>
+                    <li><a href="cisc3003-SugEx04-summary.html">Summary</a></li>  
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a> · <a href="#">Twitter</a> · <a href="#">Instagram</a> · <a href="#">Youtube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>CISC3003 Web Programming - 2026:DC325629 + LAM KA WAI</p>
+        </div>
+    </footer>
+</body>
+</html>
