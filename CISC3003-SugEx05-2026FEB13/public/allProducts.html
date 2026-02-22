@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products · Lam Ka Wai Store</title>
+    <link rel="stylesheet" href="css/cisc3003-SugEx05-demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* 简单排序工具栏样式 */
+        .product-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .sort-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .sort-control label {
+            font-weight: 600;
+            color: var(--gray);
+        }
+        .sort-control select {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--cream);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            background-color: white;
+            cursor: pointer;
+            outline: none;
+            transition: var(--transition);
+        }
+        .sort-control select:hover {
+            border-color: var(--gray);
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+        .page-btn {
+            min-width: 40px;
+            height: 40px;
+            border: 2px solid var(--cream);
+            background: white;
+            border-radius: var(--radius);
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .page-btn:hover,
+        .page-btn.active {
+            background: var(--gray);
+            color: white;
+            border-color: var(--gray);
+        }
+        .page-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 (保持不变) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="cisc3003-sugEx04-home.html" class="logo">
+                Lam Ka Wai
+                <img src="images/Michaels-Logo.png" alt="Michaels Logo" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="cisc3003-SugEx05-home.html">Home</a></li>
+                <li><a href="cisc3003-SugEx05-profile.html">Profile</a></li>
+                <li><a href="cisc3003-SugEx05-summary.html">Summary</a></li>
+                <li><a href="cisc3003-SugEx05-showcase.html">Showcase</a></li>
+                <li><a href="cisc3003-SugEx05-qualification.html">Qualifications</a></li>
+                <li><a href="cisc3003-SugEx05-demo.html" class="active">Demo</a></li>
+            </ul>
+            <details class="mobile-menu">
+                <summary>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </summary>
+                <ul>
+                    <li><a href="cisc3003-SugEx05-home.html">Home</a></li>
+                    <li><a href="cisc3003-SugEx05-profile.html">Profile</a></li>
+                    <li><a href="cisc3003-SugEx05-summary.html">Summary</a></li>
+                    <li><a href="cisc3003-SugEx05-showcase.html">Showcase</a></li>
+                    <li><a href="cisc3003-SugEx05-qualification.html">Qualifications</a></li>
+                    <li><a href="cisc3003-SugEx05-demo.html" class="active">Demo</a></li>
+                </ul>
+            </details>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <section class="products-section">
+            <div class="section-header">
+                <h2>All Products</h2>
+                <p>explore our full collection — fresh styles for everyone</p>
+            </div>
+
+            <!-- 排序工具栏 -->
+            <div class="product-toolbar">
+                <div class="sort-control">
+                    <label for="sortSelect">Sort by:</label>
+                    <select id="sortSelect">
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating-asc">Rating: Low to High</option>
+                        <option value="rating-desc" selected>Rating: High to Low</option>
+                    </select>
+                </div>
+                <!-- 分页信息 (右侧留白) -->
+                <div></div>
+            </div>
+
+            <!-- 商品网格容器 (由JS动态填充) -->
+            <div class="products-grid" id="productsGrid"></div>
+
+            <!-- 分页控件 -->
+            <div class="pagination" id="pagination"></div>
+        </section>
+    </main>
+
+    <!-- 页脚 (保持不变) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Download Our App</h3>
+                <p>iOS and Android coming soon</p>
+                <div class="app-badge">
+                    <img src="images/app-store.png" alt="App Store" style="height:20px; vertical-align:middle;">
+                </div>
+                <div class="app-badge">
+                    <img src="images/play-store.png" alt="Google Play" style="height:20px; vertical-align:middle;">
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Our Logo</h4>
+                <img src="images/Michaels-Logo.png" alt="Logo" class="footer-logo-img">
+                <p style="margin-top:0.5rem;">since 2026</p>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="cisc3003-SugEx05-home.html">Home</a></li>
+                    <li><a href="cisc3003-SugEx05-profile.html">Profile</a></li>
+                    <li><a href="cisc3003-SugEx05-qualification.html">CV</a></li>
+                    <li><a href="cisc3003-SugEx05-showcase.html">Showcase</a></li>
+                    <li><a href="cisc3003-SugEx05-summary.html">Summary</a></li>  
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a> · <a href="#">Twitter</a> · <a href="#">Instagram</a> · <a href="#">Youtube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>CISC3003 Web Programming - 2026:DC325629 + LAM KA WAI</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // ---------- 原始商品数据 (包含所有商品) ----------
+            const allProducts = [
+                { img: "images/product-1.jpg", name: "Red Printed T-Shirt", price: 29.99, rating: 4.5, link: "productDetails.html" },
+                { img: "images/product-2.jpg", name: "Classic Sneakers", price: 89.99, rating: 4.9, link: "" },
+                { img: "images/product-3.jpg", name: "Slim Fit Jeans", price: 69.50, rating: 4.3, link: "" },
+                { img: "images/product-4.jpg", name: "Puma T-Shirt", price: 45.00, rating: 4.2, link: "" },
+                { img: "images/product-5.jpg", name: "Running Shoes", price: 79.99, rating: 5.0, link: "" },
+                { img: "images/product-6.jpg", name: "Vintage T-Shirt", price: 24.90, rating: 4.1, link: "" },
+                { img: "images/product-7.jpg", name: "Sports Socks (3-Pack)", price: 12.99, rating: 3.8, link: "" },
+                { img: "images/product-8.jpg", name: "Smart Watch", price: 149.00, rating: 4.8, link: "" },
+                { img: "images/product-9.jpg", name: "Sport Watch", price: 99.00, rating: 4.4, link: "" },
+                { img: "images/product-10.jpg", name: "High-Top Sneakers", price: 119.99, rating: 4.6, link: "" },
+                { img: "images/product-11.jpg", name: "Casual Shoes", price: 59.99, rating: 4.0, link: "" },
+                { img: "images/product-12.jpg", name: "Sports Joggers", price: 79.99, rating: 4.7, link: "" }
+            ];
+
+            // 仅保留图片名为 "product-数字.jpg" 的商品 (实际上 allProducts 已经全是 product- 开头，但为了扩展性保留过滤逻辑)
+            const products = allProducts.filter(p => p.img.startsWith('images/product-'));
+
+            // 每页显示商品数量
+            const ITEMS_PER_PAGE = 8;
+            let currentPage = 1;
+            let currentSort = "rating-desc"; // 默认按评分从高到低
+
+            // 获取DOM元素
+            const grid = document.getElementById('productsGrid');
+            const paginationDiv = document.getElementById('pagination');
+            const sortSelect = document.getElementById('sortSelect');
+
+            // 辅助函数：根据评分生成星星字符串（向下取整）
+            function getStarString(rating) {
+                const fullStars = Math.floor(rating);        // 实星数量（向下取整）
+                const emptyStars = 5 - fullStars;            // 空星数量
+                return '★'.repeat(fullStars) + '☆'.repeat(emptyStars);
+            }
+
+            // 排序函数
+            function sortProducts(products, sortKey) {
+                const sorted = [...products];
+                switch(sortKey) {
+                    case 'price-asc':
+                        sorted.sort((a, b) => a.price - b.price);
+                        break;
+                    case 'price-desc':
+                        sorted.sort((a, b) => b.price - a.price);
+                        break;
+                    case 'rating-asc':
+                        sorted.sort((a, b) => a.rating - b.rating);
+                        break;
+                    case 'rating-desc':
+                        sorted.sort((a, b) => b.rating - a.rating);
+                        break;
+                    default:
+                        break;
+                }
+                return sorted;
+            }
+
+            // 渲染当前页商品
+            function render() {
+                // 1. 排序
+                const sorted = sortProducts(products, currentSort);
+
+                // 2. 计算分页
+                const totalPages = Math.ceil(sorted.length / ITEMS_PER_PAGE);
+                if (currentPage > totalPages) currentPage = totalPages || 1;
+                const start = (currentPage - 1) * ITEMS_PER_PAGE;
+                const end = start + ITEMS_PER_PAGE;
+                const pageProducts = sorted.slice(start, end);
+
+                // 3. 清空网格并重新填充
+                grid.innerHTML = '';
+                pageProducts.forEach((p, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+
+                    // 图片部分 (可能带链接)
+                    let imgHtml = `<img src="${p.img}" alt="${p.name}">`;
+                    if (p.link) {
+                        imgHtml = `<a href="${p.link}">${imgHtml}</a>`;
+                    }
+
+                    // 标题部分 (可能带链接)
+                    let titleHtml = `<h3>${p.name}</h3>`;
+                    if (p.link) {
+                        titleHtml = `<a href="${p.link}"><h3>${p.name}</h3></a>`;
+                    }
+
+                    // 价格和评分
+                    const priceHtml = `<div class="price">$${p.price.toFixed(2)}</div>`;
+                    const ratingHtml = `<div class="rating">${getStarString(p.rating)} (${p.rating.toFixed(1)})</div>`;
+
+                    card.innerHTML = imgHtml + titleHtml + priceHtml + ratingHtml;
+                    grid.appendChild(card);
+                });
+
+                // 4. 渲染分页按钮
+                renderPagination(totalPages);
+            }
+
+            // 渲染分页按钮
+            function renderPagination(totalPages) {
+                if (totalPages <= 1) {
+                    paginationDiv.innerHTML = '';
+                    return;
+                }
+
+                let html = '';
+                // 上一页
+                html += `<button class="page-btn" ${currentPage === 1 ? 'disabled' : ''} data-page="${currentPage-1}">‹</button>`;
+
+                // 页码
+                for (let i = 1; i <= totalPages; i++) {
+                    html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+                }
+
+                // 下一页
+                html += `<button class="page-btn" ${currentPage === totalPages ? 'disabled' : ''} data-page="${currentPage+1}">›</button>`;
+
+                paginationDiv.innerHTML = html;
+
+                // 为分页按钮绑定事件
+                paginationDiv.querySelectorAll('.page-btn').forEach(btn => {
+                    if (!btn.disabled) {
+                        btn.addEventListener('click', (e) => {
+                            const page = parseInt(e.target.dataset.page);
+                            if (!isNaN(page)) {
+                                currentPage = page;
+                                render();
+                            }
+                        });
+                    }
+                });
+            }
+
+            // 监听排序变化
+            sortSelect.addEventListener('change', (e) => {
+                currentSort = e.target.value;
+                currentPage = 1; // 切换排序后回到第一页
+                render();
+            });
+
+            // 初始渲染
+            render();
+        })();
+    </script>
+</body>
+</html>
