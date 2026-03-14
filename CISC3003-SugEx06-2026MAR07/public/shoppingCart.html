@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lam Ka Wai - Shopping Cart</title>
+    <link rel="stylesheet" href="css/shoppingCart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 導覽列 (與 demo.html 一致) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="cisc3003-SugEx06-home.html" class="logo">
+                Lam Ka Wai
+                <img src="images/Michaels-Logo.png" alt="Michaels Logo" class="logo-img">
+            </a>
+            <ul class="nav-menu nav-links">
+                <li><a href="cisc3003-SugEx06-home.html">Home</a></li>
+                <li><a href="cisc3003-SugEx06-profile.html">Profile</a></li>
+                <li><a href="cisc3003-SugEx06-summary.html">Summary</a></li>
+                <li><a href="cisc3003-SugEx06-showcase.html">Showcase</a></li>
+                <li><a href="cisc3003-SugEx06-qualification.html">Qualifications</a></li>
+                <li><a href="cisc3003-SugEx06-demo.html">Demo</a></li>
+                <li><a href="shoppingCart.html" class="active">
+                    <img src="images/cart.png" alt="Shopping Cart" style="width:40px; height:40px; vertical-align:middle;">
+                </a></li>
+            </ul>
+            <details class="mobile-menu">
+                <summary>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </summary>
+                <ul>
+                    <li><a href="cisc3003-SugEx06-home.html">Home</a></li>
+                    <li><a href="cisc3003-SugEx06-profile.html">Profile</a></li>
+                    <li><a href="cisc3003-SugEx06-summary.html">Summary</a></li>
+                    <li><a href="cisc3003-SugEx06-showcase.html">Showcase</a></li>
+                    <li><a href="cisc3003-SugEx06-qualification.html">Qualifications</a></li>
+                    <li><a href="cisc3003-SugEx06-demo.html">Demo</a></li>
+                    <li><a href="shoppingCart.html" class="active">
+                        <img src="images/cart.png" alt="Shopping Cart" style="width:40px; height:40px; vertical-align:middle;">
+                    </a></li>
+                </ul>
+            </details>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <!-- 購物車標題 -->
+        <div class="section-header">
+            <h2>Your Shopping Cart</h2>
+            <p>Review your items before checkout</p>
+        </div>
+
+        <!-- 購物車表格 -->
+        <div class="cart-table-container">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 商品 1 (buy-1.jpg) -->
+                    <tr>
+                        <td class="product-cell">
+                            <img src="images/buy-1.jpg" alt="Red Printed T-Shirt" class="cart-product-img">
+                            <div class="product-details">
+                                <span class="product-name">Red Printed T-Shirt</span>
+                                <span class="product-price">Price: USD 50.00</span>
+                                <a href="#" class="remove-link">[Remove]</a>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number" value="1" min="1" class="quantity-input">
+                        </td>
+                        <td class="subtotal-cell">USD 50.00</td>
+                    </tr>
+                    <!-- 商品 2 (buy-2.jpg) -->
+                    <tr>
+                        <td class="product-cell">
+                            <img src="images/buy-2.jpg" alt="Red Printed T-Shirt" class="cart-product-img">
+                            <div class="product-details">
+                                <span class="product-name">Red Printed T-Shirt</span>
+                                <span class="product-price">Price: USD 75.00</span>
+                                <a href="#" class="remove-link">[Remove]</a>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number" value="1" min="1" class="quantity-input">
+                        </td>
+                        <td class="subtotal-cell">USD 75.00</td>
+                    </tr>
+                    <!-- 商品 3 (buy-3.jpg) -->
+                    <tr>
+                        <td class="product-cell">
+                            <img src="images/buy-3.jpg" alt="Red Printed T-Shirt" class="cart-product-img">
+                            <div class="product-details">
+                                <span class="product-name">Red Printed T-Shirt</span>
+                                <span class="product-price">Price: USD 75.00</span>
+                                <a href="#" class="remove-link">[Remove]</a>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number" value="1" min="1" class="quantity-input">
+                        </td>
+                        <td class="subtotal-cell">USD 75.00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 訂單摘要 (與表格欄位對齊) -->
+            <div class="summary-grid">
+                <div class="summary-row">
+                    <span class="summary-label">Subtotal</span>
+                    <span class="summary-empty"></span> <!-- 對應 Quantity 欄 -->
+                    <span class="summary-value">USD 200.00</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Tax</span>
+                    <span class="summary-empty"></span>
+                    <span class="summary-value">USD 35.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span class="summary-label">Total</span>
+                    <span class="summary-empty"></span>
+                    <span class="summary-value">USD 235.00</span>
+                </div>
+            </div>
+
+            <div class="checkout-wrapper">
+                <a href="shoppingCart.html" class="btn btn-color-1 checkout-btn">Proceed to Checkout</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁尾 (與 demo.html 完全一致) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Download Our App</h3>
+                <p>iOS and Android coming soon</p>
+                <div class="app-badge">
+                    <img src="images/app-store.png" alt="App Store" style="height:20px; vertical-align:middle;">
+                </div>
+                <div class="app-badge">
+                    <img src="images/play-store.png" alt="Google Play" style="height:20px; vertical-align:middle;">
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Our Logo</h4>
+                <img src="images/Michaels-Logo.png" alt="Logo" class="footer-logo-img">
+                <p style="margin-top:0.5rem;">since 2026</p>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="cisc3003-SugEx06-home.html">Home</a></li>
+                    <li><a href="cisc3003-SugEx06-profile.html">Profile</a></li>
+                    <li><a href="cisc3003-SugEx06-qualification.html">CV</a></li>
+                    <li><a href="cisc3003-SugEx06-showcase.html">Showcase</a></li>
+                    <li><a href="cisc3003-SugEx06-summary.html">Summary</a></li>  
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a> · <a href="#">Twitter</a> · <a href="#">Instagram</a> · <a href="#">Youtube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>CISC3003 Web Programming - 2025: Student ID + Student Name DC325629 + LAM KA WAI</p>
+        </div>
+    </footer>
+</body>
+</html>
