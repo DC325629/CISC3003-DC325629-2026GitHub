@@ -1,0 +1,143 @@
+/* 整体背景为白色 */
+body {
+    background-color: #ffffff;
+}
+
+/* 顶部标题栏样式（深色背景由 MDL 默认提供） */
+header h1.mdl-layout-title {
+    font-size: 32px;
+    color: white;
+}
+header h1 span {
+    color: #ff6e40;
+}
+
+/* -------------------- 左侧栏布局（flex 实现主副背景） -------------------- */
+.mdl-layout__drawer {
+    background-color: #37474F;   /* 主背景（菜单区域） */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;               /* 确保占满视口高度，配合 flex 撑开 */
+}
+
+/* 个人资料区域：副背景 #263238，固定高度不压缩 */
+.mdl-layout__drawer .profile {
+    background-color: #263238;
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0;             /* 防止被压缩 */
+}
+
+/* 个人资料内部元素颜色 */
+.mdl-layout__drawer .profile h4,
+.mdl-layout__drawer .profile span {
+    color: white;
+}
+.avatar {
+    width: 96px;
+    height: 96px;  
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* 导航菜单区域：透明背景（继承父级主背景），自动填充剩余空间 */
+.mdl-layout__drawer .mdl-navigation {
+    background-color: transparent;  /* 显示父级 #37474F 背景 */
+    flex-grow: 1;                  /* 占据剩余高度 */
+    overflow-y: auto;              /* 菜单过多时可滚动 */
+    padding: 8px 0;
+}
+
+/* 菜单项样式 */
+.mdl-layout__drawer .mdl-navigation__link {
+    background-color: #37474F;   /* 与父级一致，但保留以便视觉统一 */
+    color: #8498A1;
+    font-size: 14px;
+    margin: 2px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.mdl-layout__drawer .mdl-navigation__link:hover {
+    background-color: #4a5b66;
+    color: white;
+}
+.mdl-layout__drawer .mdl-navigation__link .material-icons {
+    color: #8498A1;
+    margin-right: 12px;
+}
+.mdl-layout__drawer .mdl-navigation__link:hover .material-icons {
+    color: white;
+}
+
+/* -------------------- 主内容区 -------------------- */
+.mdl-layout__content {
+    padding: 0 !important;
+}
+.page-content {
+    margin: 0;
+    background-color: #ffffff;  /* 白色背景 */
+    padding: 0;
+    min-height: 100%;
+}
+
+/* Order Summaries 标题区：左内边距 8px，右内边距 24px */
+.page-content > header {
+    margin: 0;
+    padding: 12px 24px 12px 8px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+.page-content > header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #000000;
+}
+.page-content > header p {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    color: #424242;
+}
+
+/* 网格布局内边距 */
+.mdl-grid {
+    padding: 16px 24px;
+}
+
+/* 卡片样式 */
+.mdl-card {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.mdl-card__title-text,
+.mdl-card__supporting-text {
+    color: #000;
+}
+.mdl-card__title {
+    color: #fff;
+}
+.mdl-card__title.mdl-color--orange {
+    background-color: #ff6e40 !important;
+}
+.mdl-card__title.mdl-color--purple {
+    background-color: #673ab7 !important;
+}
+
+/* 表格样式（增加边框与卡片统一） */
+.mdl-card .mdl-data-table {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.mdl-data-table td, .mdl-data-table th {
+    color: #000;
+}
+.totals {
+    font-style: italic;
+}
+/* Grand Total 金额颜色（内联样式已确保，此规则作为备选） */
+.grandtotals td:last-child {
+    color: #751FEC !important;
+    font-weight: 700;
+}

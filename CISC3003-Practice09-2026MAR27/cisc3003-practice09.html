@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CISC3003 Practice 09</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/styles.css">
+ 
+</head>
+
+<body>
+    
+<div>
+            
+  <header>
+    <div>
+     <h1 class="mdl-layout-title"><span>CRM Admin</span></h1>
+     
+      <div></div>
+      
+      <div>
+                  
+        <label>account_box</label>  
+        <div>Messages</div>                     
+
+        <label>notifications</label> 
+         <div>Notifications</div>           
+                  
+        <label>
+          <i>search</i>
+        </label>
+        <div>
+          <input type="text" name="sample">
+        </div>
+        
+      </div>
+    </div>
+  </header>
+  
+  <div>
+       <div class="profile">
+           <img src="images/profile.jpg" class="avatar">
+           <h4>John Locke</h4>           
+           <span>johnlocke@example.com</span>
+       </div>
+
+    <nav>
+        <a href=""><i class="material-icons" role="presentation">dashboard</i> Dashboard</a>
+        <a href=""><i class="material-icons" role="presentation">message</i> Messages</a>
+        <a href=""><i class="material-icons" role="presentation">event</i> Tasks</a>
+        <a href=""><i class="material-icons" role="presentation">call</i> Orders</a>
+        <a href=""><i class="material-icons" role="presentation">settings</i> Configure</a>
+        <a href=""><i class="material-icons" role="presentation">view_list</i> Catalog</a>
+        <a href=""><i class="material-icons" role="presentation">contacts</i> Customers</a>
+        <a href=""><i class="material-icons" role="presentation">insert_chart</i> Analytics</a>                               
+    </nav>
+  </div>
+
+  
+  <main>
+  
+    <header>
+      <h4>Order Summaries</h4>
+      <p>Examine your customer orders</p>
+    </header>   
+    
+    <section>
+    
+        <div>
+          <div>
+            <div>
+              <h2>My Orders</h2>
+            </div>
+            <div>            
+                <ul>
+                    <li><a href="#">Order #500</a></li>
+                    <li><a href="#">Order #510</a></li>
+                    <li><a href="#">Order #520</a></li>
+                    <li><a href="#">Order #530</a></li>
+                    <li><a href="#">Order #540</a></li>                 
+                </ul>   
+            </div>    
+          </div> 
+
+          <div>
+            <div>
+              <h2>Selected Order: #520</h2>
+            </div>
+            <div>
+                <table>
+                 <caption>Customer: <strong>Mount Royal University</strong></caption>
+                  <thead>
+                    <tr>
+                      <th>Cover</th>
+                      <th>Title</th>
+                      <th>Quantity</th>
+                      <th>Price</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                      <tr class="totals">
+                          <td colspan="4">Subtotal</td>
+                          <td>$11650.00</td>
+                      </tr>
+                      <tr class="totals">
+                          <td colspan="4">Shipping</td>
+                          <td>$100.00</td>
+                      </tr> 
+                      <tr class="grandtotals">
+                          <td colspan="4">Grand Total</td>
+                          <td>$12650.00</td>
+                      </tr>                            
+                  </tfoot>          
+                  <tbody>
+                    <tr>
+                     <td><img src="images/books/tinysquare/0205886159.jpg"></td>
+                      <td>Global Issues, Local Arguments</td>
+                      <td>25</td>
+                      <td>$10.00</td>
+                      <td>$250.00</td>
+                    </tr>
+                    <tr>
+                     <td><img src="images/books/tinysquare/0205875548.jpg"></td>
+                      <td>The Prentice Hall Guide for College Writers</td>
+                      <td>50</td>
+                      <td>$50.00</td>
+                      <td>$2500.00</td>
+                    </tr>
+                    <tr>
+                     <td><img src="images/books/tinysquare/0321826035.jpg"></td>
+                      <td>Introductory and Intermediate Algebra 5e</td>
+                      <td>40</td>
+                      <td>$35.00</td>
+                      <td>$1400.00</td>
+                    </tr>
+                    <tr>
+                     <td><img src="images/books/tinysquare/0205902278.jpg"></td>
+                      <td>Literature and the Writing Process</td>
+                      <td>300</td>
+                      <td>$20.00</td>
+                      <td>$7500.00</td>
+                    </tr>            
+                  </tbody>
+
+                </table>
+            </div>
+
+          </div> 
+
+        </div>
+    
+    </section>
+  </main>
+  
+</div>
+          
+</body>
+</html>
