@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Travelia - Explore the world" />
+    <meta name="description" content="This is a travel html template" />
+    <!-- === favicon === -->
+    <link rel="shortcut icon" href="../images/cisc3003-project-demo02/favicon.svg" type="image/svg+xml" />
+    <!-- === Google fonts link === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- === Custom Css link === -->
+    <link rel="stylesheet" href="../css/cisc3003-project-demo02/style.css" />
+    <!-- === preload image === -->
+    <link rel="preload" as="image" href="../images/cisc3003-project-demo02/preloader.svg" />
+    <link rel="preload" as="image" href="../images/cisc3003-project-demo02/hero-banner.png" />
+    <!--  -->
+    <title>Travelia - Explore the world</title>
+  </head>
+  <body>
+    <!-- === Preloader === -->
+    <div class="preloader" data-preloader>
+      <div class="preloader-inner">
+        <img
+          src="../images/cisc3003-project-demo02/preloader.svg"
+          width="50"
+          height="50"
+          alt=""
+          class="img"
+        />
+      </div>
+    </div>
+
+    <!-- === Header === -->
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="../images/cisc3003-project-demo02/logo.svg"
+            width="187"
+            height="38"
+            alt="Travelia Logo"
+          />
+        </a>
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img
+                src="../images/cisc3003-project-demo02/logo.svg"
+                width="187"
+                height="38"
+                alt="Travelia Logo"
+              />
+            </a>
+            <button
+              class="nav-toggle-btn"
+              aria-label="close menu"
+              data-nav-toggler
+            >
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#home" class="navbar-link active">Home</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#service" class="navbar-link">Services</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#destination" class="navbar-link">Destination</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#exprience" class="navbar-link">Experience</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#gallery" class="navbar-link">Gallery</a>
+            </li>
+          </ul>
+          <div class="header-action">
+            <a href="#" class="login-btn">Login</a>
+            <a href="#" class="btn btn-primary">Sign Up</a>
+          </div>
+        </nav>
+        <button class="nav-toggle-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+        <div class="overlay" data-overlay data-nav-toggler></div>
+      </div>
+    </header>
+
+    <!-- === Main === -->
+    <main>
+      <article>
+        <!-- +++ Hero +++ -->
+        <section
+          id="home"
+          class="section hero has-bg-image"
+          aria-label="hero"
+          style="background-image: url('../images/cisc3003-project-demo02/hero-bg.jpg')"
+        >
+          <div class="container">
+            <div class="hero-content">
+              <p class="hero-subtitle">
+                Start Your Journey
+                <img
+                  src="../images/cisc3003-project-demo02/title-icon.svg"
+                  width="20"
+                  height="20"
+                  alt="world icon"
+                  class="img"
+                />
+              </p>
+              <h1 class="h1 title hero-title">
+                Discover Amazing Places With Us
+              </h1>
+              <p class="hero-text">
+                We are committed to giving you the best travel experiences with carefully curated destinations and seamless planning.
+              </p>
+              <div class="wrapper">
+                <a href="#" class="btn btn-secondary">
+                  Plan a Trip
+                  <ion-icon name="chevron-forward" aria-hidden="true">
+                  </ion-icon>
+                </a>
+                <button class="hero-btn">
+                  <div class="btn-img">
+                    <img
+                      src="../images/cisc3003-project-demo02/hero-button-img.jpg"
+                      width="100"
+                      height="100"
+                      alt="our story"
+                      class="img-cover"
+                    />
+                    <ion-icon name="play" aria-hidden="true"></ion-icon>
+                  </div>
+                  <p class="text">Watch our Story</p>
+                </button>
+              </div>
+            </div>
+            <figure class="hero-banner">
+              <img
+                src="../images/cisc3003-project-demo02/hero-banner.png"
+                width="631"
+                height="735"
+                alt="hero banner"
+                class="w-100"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <!-- +++ Service +++ -->
+        <section id="service" class="section service" aria-label="service">
+          <div class="container">
+            <div class="title-wrapper">
+              <p class="section-subtitle">What We Offer</p>
+              <h2 class="h2 title section-title">Premium Travel Benefits</h2>
+              <p class="section-text">
+                Enjoy exclusive advantages when you book your next adventure with us.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="card-icon">
+                <img
+                  src="../images/cisc3003-project-demo02/service-icon-1.svg"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                  alt="icon"
+                />
+              </div>
+              <h3 class="h3 title card-title">Endless Destinations</h3>
+              <p class="card-text">
+                Over 500+ unique locations ready to explore.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="card-icon">
+                <img
+                  src="../images/cisc3003-project-demo02/service-icon-2.svg"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                  alt="icon"
+                />
+              </div>
+              <h3 class="h3 title card-title">Expert Local Guides</h3>
+              <p class="card-text">
+                Certified guides with years of local knowledge.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="card-icon">
+                <img
+                  src="../images/cisc3003-project-demo02/service-icon-3.svg"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                  alt="icon"
+                />
+              </div>
+              <h3 class="h3 title card-title">Hassle-Free Booking</h3>
+              <p class="card-text">
+                Fast, secure, and simple reservation process.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- +++ Destination +++ -->
+        <section
+          id="destination"
+          class="section destination"
+          aria-label="description"
+        >
+          <div class="container">
+            <p class="section-subtitle">Top Destinations</p>
+            <h2 class="h2 title section-title">Explore Most Popular Places</h2>
+            <ul class="destination-list">
+              <li>
+                <div class="destination-card">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <img
+                      src="../images/cisc3003-project-demo02/destination-1.jpg"
+                      width="600"
+                      height="650"
+                      alt="Discover the charm of Pincio Gardens"
+                      loading="lazy"
+                      class="img-cover"
+                    />
+                    <span class="card-price">$340</span>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        Discover the charm of Pincio Gardens
+                      </a>
+                    </h3>
+                    <address class="card-text">Rome, Italy</address>
+                    <div class="card-rating">
+                      <span class="span">
+                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        4.7
+                      </span>
+                      <p class="rating-text">(11.1k Reviews)</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="destination-card">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <img
+                      src="../images/cisc3003-project-demo02/destination-2.jpg"
+                      width="600"
+                      height="650"
+                      alt="Experience the Pakistan Monument"
+                      loading="lazy"
+                      class="img-cover"
+                    />
+                    <span class="card-price">$340</span>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        Experience the Pakistan Monument
+                      </a>
+                    </h3>
+                    <address class="card-text">Islamabad, Pakistan</address>
+                    <div class="card-rating">
+                      <span class="span">
+                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        4.6
+                      </span>
+                      <p class="rating-text">(16.9k Reviews)</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="destination-card">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <img
+                      src="../images/cisc3003-project-demo02/destination-3.jpg"
+                      width="600"
+                      height="650"
+                      alt="Visit the iconic Burj Khalifa"
+                      loading="lazy"
+                      class="img-cover"
+                    />
+                    <span class="card-price">$340</span>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        Visit the iconic Burj Khalifa
+                      </a>
+                    </h3>
+                    <address class="card-text">Skyscraper in Dubai</address>
+                    <div class="card-rating">
+                      <span class="span">
+                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        4.7
+                      </span>
+                      <p class="rating-text">(120k Reviews)</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="destination-card">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <img
+                      src="../images/cisc3003-project-demo02/destination-4.jpg"
+                      width="600"
+                      height="650"
+                      alt="Relax at Milaidhoo Island"
+                      loading="lazy"
+                      class="img-cover"
+                    />
+                    <span class="card-price">$340</span>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        Relax at Milaidhoo Island
+                      </a>
+                    </h3>
+                    <address class="card-text">Island in the Maldives</address>
+                    <div class="card-rating">
+                      <span class="span">
+                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        4.7
+                      </span>
+                      <p class="rating-text">(70 Reviews)</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="destination-card">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <img
+                      src="../images/cisc3003-project-demo02/destination-5.jpg"
+                      width="600"
+                      height="650"
+                      alt="Explore Ko Tao paradise"
+                      loading="lazy"
+                      class="img-cover"
+                    />
+                    <span class="card-price">$340</span>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        Explore Ko Tao paradise
+                      </a>
+                    </h3>
+                    <address class="card-text">
+                      Island in the Gulf of Thailand
+                    </address>
+                    <div class="card-rating">
+                      <span class="span">
+                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        4.5
+                      </span>
+                      <p class="rating-text">(985 Reviews)</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="destination-card">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <img
+                      src="../images/cisc3003-project-demo02/destination-6.jpg"
+                      width="600"
+                      height="650"
+                      alt="Marvel at Grand Mecidiye Mosque"
+                      loading="lazy"
+                      class="img-cover"
+                    />
+                    <span class="card-price">$340</span>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        Marvel at Grand Mecidiye Mosque
+                      </a>
+                    </h3>
+                    <address class="card-text">
+                      Mosque in Istanbul, Türkiye
+                    </address>
+                    <div class="card-rating">
+                      <span class="span">
+                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        4.8
+                      </span>
+                      <p class="rating-text">(26.9k Reviews)</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary">View All Destinations</a>
+          </div>
+        </section>
+
+        <!-- +++ Experience +++ -->
+        <section
+          id="exprience"
+          class="section experience"
+          aria-label="experience"
+        >
+          <div class="container">
+            <div class="experience-content">
+              <p class="section-subtitle">Our Experience</p>
+              <h2 class="h2 title section-title">
+                Years of Excellence, Thousands of Happy Travelers
+              </h2>
+              <p class="section-text">
+                From day one, we've focused on providing affordable prices, reliable service, and unforgettable journeys. Your satisfaction is our greatest reward.
+              </p>
+              <ul class="experience-list">
+                <li class="experience-item">
+                  <h3 class="h3 title item-title">20</h3>
+                  <p class="item-text">
+                    Years <br />
+                    of Excellence
+                  </p>
+                </li>
+                <li class="experience-item">
+                  <h3 class="h3 title item-title">20</h3>
+                  <p class="item-text">
+                    Global <br />
+                    Partners
+                  </p>
+                </li>
+                <li class="experience-item">
+                  <h3 class="h3 title item-title">50k+</h3>
+                  <p class="item-text">
+                    Happy <br />
+                    Travelers
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <figure class="experience-banner">
+              <img
+                src="../images/cisc3003-project-demo02/experience-banner.png"
+                width="550"
+                height="660"
+                loading="lazy"
+                alt="experience banner"
+                class="w-100"
+              />
+              <img
+                width="75"
+                height="109"
+                loading="lazy"
+                src="../images/cisc3003-project-demo02/exp-shape.svg"
+                alt="24/7 Guide Support"
+                class="experience-shape"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <!-- +++ Gallery +++ -->
+        <section id="gallery" class="section gallery" aria-label="gallery">
+          <div class="container">
+            <p class="section-subtitle">Photo Gallery</p>
+            <h2 class="h2 title section-title">Moments Shared by Travelers</h2>
+            <ul class="gallery-list">
+              <li class="gallery-item">
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 925"
+                >
+                  <img
+                    src="../images/cisc3003-project-demo02/gallery-1.jpg"
+                    width="700"
+                    height="925"
+                    loading="lazy"
+                    alt="gallery"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+              <li class="gallery-item">
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 925"
+                >
+                  <img
+                    src="../images/cisc3003-project-demo02/gallery-2.jpg"
+                    width="700"
+                    height="925"
+                    loading="lazy"
+                    alt="gallery"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+              <li class="gallery-item">
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 840"
+                >
+                  <img
+                    src="../images/cisc3003-project-demo02/gallery-3.jpg"
+                    width="700"
+                    height="840"
+                    loading="lazy"
+                    alt="gallery"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+              <li class="gallery-item">
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 378"
+                >
+                  <img
+                    src="../images/cisc3003-project-demo02/gallery-4.jpg"
+                    width="700"
+                    height="378"
+                    loading="lazy"
+                    alt="gallery"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+              <li class="gallery-item">
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 378"
+                >
+                  <img
+                    src="../images/cisc3003-project-demo02/gallery-5.jpg"
+                    width="700"
+                    height="378"
+                    loading="lazy"
+                    alt="gallery"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+              <li class="gallery-item">
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 378"
+                >
+                  <img
+                    src="../images/cisc3003-project-demo02/gallery-6.jpg"
+                    width="700"
+                    height="378"
+                    loading="lazy"
+                    alt="gallery"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- +++ CTA +++ -->
+        <section class="section cta" aria-label="call to action">
+          <div class="container">
+            <div
+              class="cta-card has-bg-image"
+              style="background-image: url('./imgs/cta-bg.jpg')"
+            >
+              <h2 class="h2 title section-title">
+                Get Ready & Explore the Wonders of Our Planet
+                <img
+                  src="../images/cisc3003-project-demo02/title-icon.svg"
+                  width="36"
+                  height="36"
+                  loading="lazy"
+                  alt="icon"
+                  class="img"
+                />
+              </h2>
+              <p class="section-text">
+                Unlock exclusive deals and personalized travel offers just for you.
+              </p>
+              <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- === Footer === -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <img
+                src="../images/cisc3003-project-demo02/logo.svg"
+                width="187"
+                height="38"
+                loading="lazy"
+                alt="logo"
+              />
+            </a>
+            <p class="footer-text">
+              We always make our customers happy by offering a wide range of choices and seamless travel experiences.
+            </p>
+            <ul class="social-list">
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">About</p>
+            </li>
+            <li>
+              <a href="#" class="footer-link">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Features</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">News</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Menu</a>
+            </li>
+          </ul>
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Company</p>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Why Us</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Partner With Us</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">FAQ</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Blog</a>
+            </li>
+          </ul>
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Support</p>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Account</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Support Center</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Feedback</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Contact Us</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Accessibility</a>
+            </li>
+          </ul>
+          <div class="footer-list">
+            <p class="footer-list-title">Get in Touch</p>
+            <p class="footer-text">
+              Have questions or feedback? We'd love to hear from you.
+            </p>
+            <form action="" class="input-wrapper">
+              <input
+                type="email"
+                name="email-address"
+                placeholder="Email Address"
+                autocomplete="off"
+                required
+                class="input-field"
+              />
+              <button
+                type="submit"
+                class="input-btn"
+                aria-label="send a message"
+              >
+                <ion-icon
+                  name="paper-plane-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            CISC3003 Web Programming - 2026: Pair 13 DC325629 + LAM KA WAI | DC325315 + CHAO WEN JIE
+          </p>
+          <ul class="footer-bottom-list">
+            <li>
+              <a href="#" class="footer-bottom-link">Terms and Conditions</a>
+            </li>
+            <li>
+              <a href="#" class="footer-bottom-link">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom Js link -->
+    <script src="../js/cisc3003-project-demo02/script.js"></script>
+    <!-- === Ion icon link === -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

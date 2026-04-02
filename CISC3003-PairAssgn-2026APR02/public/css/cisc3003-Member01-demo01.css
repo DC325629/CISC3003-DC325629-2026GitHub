@@ -1,0 +1,708 @@
+/* ===== 全局樣式 (參考 style.css) ===== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: rgb(85, 85, 85);
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    line-height: 1.2;
+    color: rgb(53, 53, 53);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 300ms ease;
+}
+
+/* ===== 導航欄 (完全複製自 style.css 並調整) ===== */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(53, 53, 53);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+.logo-img {
+    height: 48px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.nav-menu a {
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.nav-menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(181, 181, 181);
+    border-radius: 2px;
+}
+
+/* ===== 行動版選單 (保留原有結構，視覺調整) ===== */
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.mobile-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.mobile-menu summary .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu[open] summary .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu[open] summary .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu[open] summary .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.mobile-menu ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1rem 0;
+    list-style: none;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: black;
+}
+
+.mobile-menu a:hover {
+    background-color: rgba(0,0,0,0.05);
+    color: grey;
+}
+
+/* ===== 主要容器 ===== */
+.page-container {
+    min-height: calc(100vh - 180px);
+    padding: 2rem 0;
+}
+
+/* ===== 區塊標頭 (參考 index.html 的 section 標題) ===== */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    color: rgb(53, 53, 53);
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background-color: rgb(181, 181, 181);
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: rgb(85, 85, 85);
+}
+
+/* ===== 按鈕 (完全複製 style.css 的 btn-color-1 和 btn-color-2) ===== */
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem 1.5rem;
+    width: auto;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(53, 53, 53);
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    background: none;
+}
+
+.btn-color-1,
+.btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+.btn-color-1:hover {
+    background: black;
+}
+
+.btn-color-2 {
+    background: none;
+    color: rgb(53, 53, 53);
+}
+
+.btn-color-2:hover {
+    border: rgb(255, 255, 255) 0.1rem solid;
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+/* ===== 卡片通用樣式 (參考 details-container) ===== */
+.details-container {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+    text-align: center;
+    transition: all 300ms ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.details-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.color-container {
+    background: rgb(250, 250, 250);
+    border-color: rgb(163, 163, 163);
+}
+
+/* ========== 商品详情页专用样式（从 HTML 内联样式整合） ========== */
+.product-detail-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+.product-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+/* 图片画廊区域 */
+.detail-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.main-image {
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+.main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.thumbnail {
+    border-radius: 1rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+.thumbnail.active {
+    border-color: #5e3bee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.thumbnail:hover {
+    transform: scale(1.02);
+}
+/* 商品信息区域 */
+.detail-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+.rating {
+    color: #ffb347;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+.price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #c25b00;
+    margin-bottom: 1rem;
+}
+.product-details-heading {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 0.5rem;
+    border-left: 4px solid #c25b00;
+    padding-left: 0.8rem;
+}
+.product-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.size-selector, .quantity-selector {
+    margin-bottom: 1.2rem;
+}
+.size-selector label, .quantity-selector label {
+    font-weight: 600;
+    margin-right: 1rem;
+}
+select {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-family: inherit;
+    cursor: pointer;
+}
+.add-to-cart {
+    margin-top: 1rem;
+    width: 100%;
+}
+/* 相关产品区域 */
+.related-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.related-title h2 {
+    display: inline-block;
+    border-bottom: 2px solid #c25b00;
+    padding-bottom: 0.3rem;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+.product-card {
+    text-align: center;
+    padding: 1rem;
+}
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+.product-card .price {
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
+}
+/* 响应式 */
+@media (max-width: 768px) {
+    .product-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .thumbnail-grid {
+        gap: 0.5rem;
+    }
+}
+
+/* ========== 深色模式适配（与首页风格一致） ========== */
+body.dark-mode {
+    background-color: #0a0c15;
+    color: #f0f4fa;
+}
+body.dark-mode p,
+body.dark-mode .product-description {
+    color: #eef2ff !important;
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4,
+body.dark-mode .logo, body.dark-mode .detail-info h1 {
+    color: #ffffff;
+}
+body.dark-mode .navbar,
+body.dark-mode .footer,
+body.dark-mode .details-container,
+body.dark-mode .color-container {
+    background-color: #131725;
+    border-color: #2d3a5e;
+}
+body.dark-mode .btn-color-2 {
+    color: #c6e0ff;
+    border-color: #6d9eff;
+}
+body.dark-mode .btn-color-1 {
+    background: #2c4f8c;
+    border-color: #5f8bc9;
+    color: white;
+}
+body.dark-mode .btn-color-1:hover {
+    background: #1f3e6e;
+}
+body.dark-mode .nav-menu a {
+    color: #e0edff;
+}
+body.dark-mode .mobile-menu ul {
+    background-color: #131725;
+    border: 1px solid #2d3a5e;
+}
+body.dark-mode .mobile-menu a {
+    color: #e0edff;
+}
+body.dark-mode .price {
+    color: #ffb347;
+}
+body.dark-mode select {
+    background: #1e2a3a;
+    border-color: #4a627a;
+    color: #eef2ff;
+}
+body.dark-mode .thumbnail.active {
+    border-color: #9b7bff;
+}
+body.dark-mode .product-details-heading {
+    border-left-color: #ffb347;
+}
+body.dark-mode .related-title h2 {
+    border-bottom-color: #ffb347;
+}
+
+/* ========== 原有相关产品区域覆盖（保留兼容性） ========== */
+.related-products {
+    margin-top: 4rem;
+    padding: 0 1.5rem;
+}
+.related-products .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.related-products .title-group {
+    flex: 1;
+    text-align: center;
+}
+.related-products .title-group h2 {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.related-products .title-group p {
+    color: rgb(85, 85, 85);
+    font-size: 1.125rem;
+    margin-bottom: 0;
+}
+.related-products .view-more {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgb(53, 53, 53);
+    cursor: pointer;
+    transition: all 300ms ease;
+    border-bottom: 1px solid transparent;
+    white-space: nowrap;
+}
+.related-products .view-more:hover {
+    color: black;
+    border-bottom-color: rgb(53, 53, 53);
+}
+.related-products .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.product-card {
+    padding: 0.4rem 0.4rem 0.6rem;
+    text-align: center;
+}
+.product-card img {
+    width: 85%;
+    margin: 0 auto 0.25rem;
+    display: block;
+    border-radius: 2rem;
+}
+.product-card h3 {
+    font-size: 0.85rem;
+    margin-bottom: 0.1rem;
+}
+.product-card .price {
+    font-size: 0.95rem;
+    margin: 0.1rem 0;
+    font-weight: 600;
+}
+.product-card .rating {
+    font-size: 1.0rem;
+    color: #f5b342;
+}
+
+/* ===== Footer (完全複製自 style.css 頁腳風格) ===== */
+.footer {
+    background-color: white;
+    color: rgb(85, 85, 85);
+    padding: 3rem 0 1.5rem;
+    border-top: 0.1rem solid rgb(163, 163, 163);
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.footer-col h3,
+.footer-col h4 {
+    color: rgb(53, 53, 53);
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col li {
+    margin-bottom: 0.75rem;
+}
+.footer-col a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+.footer-col p {
+    color: rgb(85, 85, 85);
+}
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+    background: white;
+    padding: 5px;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+}
+.app-badge {
+    background: rgba(0,0,0,0.05);
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: rgb(53, 53, 53);
+}
+.social-links a {
+    color: rgb(53, 53, 53);
+    font-weight: 500;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    color: rgb(85, 85, 85);
+    font-size: 0.875rem;
+}
+
+/* ===== 響應式設計 ===== */
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 900px) {
+    .nav-menu {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .detail-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .thumbnail-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    .hero-title { font-size: 2.25rem; }
+    .footer-container { grid-template-columns: 1fr; }
+    .image-gallery { grid-template-columns: 1fr; }
+    .about-containers { flex-direction: column; align-items: center; }
+    
+    /* 移动端缩小 Logo */
+    .logo {
+        font-size: 1.3rem;
+    }
+    .logo-img {
+        height: 32px;
+    }
+    
+    /* Hero 移动端适配 */
+    .hero-section {
+        border-radius: 0 0 1.5rem 1.5rem;
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .detail-container {
+        padding: 1rem;
+    }
+    .thumbnail-grid {
+        gap: 0.5rem;
+    }
+    .size-selector,
+    .quantity-selector {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .products-grid,
+    .related-products .products-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .related-products .section-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .related-products .title-group {
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+    .related-products .view-more {
+        align-self: flex-end;
+    }
+    
+    /* 进一步缩小 Logo */
+    .logo {
+        font-size: 1.1rem;
+    }
+    .logo-img {
+        height: 28px;
+    }
+}

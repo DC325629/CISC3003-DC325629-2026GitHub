@@ -1,0 +1,187 @@
+/*=============================================
+  cisc3003-IndAssgn-home.css
+  Custom styles for the home page
+=============================================*/
+
+@import url("styles.css");
+
+/* Personal Info Section */
+.personal-info {
+    background-color: var(--container-color);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1120px;
+}
+
+.personal-info__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--body-color);
+    border-radius: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px hsla(0, 0%, 0%, 0.1);
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--first-color);
+    margin-top: 0.25rem;
+}
+
+.info-item h4 {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    margin-bottom: 0.25rem;
+}
+
+.info-item p {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+/* About Section Enhancements */
+.about__container {
+    gap: 3rem;
+}
+
+.about__description {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.skills-overview {
+    margin-top: 2rem;
+}
+
+.skills-overview h4 {
+    margin-bottom: 1rem;
+    color: var(--title-color);
+    font-size: var(--h3-font-size);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    background-color: var(--body-color);
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.skill-tag:hover {
+    background-color: var(--first-color);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px hsla(14, 98%, 50%, 0.2);
+}
+
+/* Photo Gallery Section */
+.personal-photos-section {
+    background-color: var(--container-color);
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.personal-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.photo-item {
+    text-align: center;
+    background-color: var(--body-color);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-item:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 12px 28px hsla(0, 0%, 0%, 0.15);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+}
+
+.photo-caption {
+    padding: 1rem;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    background-color: var(--body-color);
+}
+
+/* Footer */
+.footer__copy em {
+    font-style: italic;
+    color: #aaa;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .personal-info__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .personal-photos {
+        grid-template-columns: 1fr;
+    }
+    
+    .about__container {
+        grid-template-columns: 1fr;
+    }
+    
+    .about__images {
+        order: -1;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .personal-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .personal-photos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

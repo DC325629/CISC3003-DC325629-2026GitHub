@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Lam Ka Wai - Home</title>
+    <!-- 引用外部 CSS 文件 -->
+    <link rel="stylesheet" href="../css/cisc3003-Member01-home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="cisc3003-Member01-home.html" class="logo">
+                Lam Ka Wai
+                <img src="../images/Michaels-Logo.png" alt="Michaels Logo" class="logo-img">
+            </a>
+            <!-- 桌面导航：文字不变，链接地址按需修改 -->
+            <ul class="nav-menu nav-links">
+                <li><a href="#profile">Home</a></li>
+                <li><a href="#about">Profile</a></li>
+                <li><a href="#highlights">Summary</a></li>
+                <li><a href="#projects">Showcase</a></li>
+                <li><a href="#experience">Qualification</a></li>
+                <li><a href="cisc3003-Member01-demo01.html">Demo</a></li>
+                <li><button class="theme-toggle" id="darkModeToggle" aria-label="深色模式切换"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <!-- 移动端菜单：同样修改链接地址 -->
+            <details class="mobile-menu">
+                <summary>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </summary>
+                <ul>
+                    <li><a href="#profile">Home</a></li>
+                    <li><a href="#about">Profile</a></li>
+                    <li><a href="#highlights">Summary</a></li>
+                    <li><a href="#projects">Showcase</a></li>
+                    <li><a href="#experience">Qualification</a></li>
+                    <li><a href="cisc3003-Member01-demo01.html">Demo</a></li>
+                </ul>
+            </details>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <!-- Hero Section (id="profile") -->
+        <section id="profile" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Hello, I'm <span class="highlight">Lam Ka Wai</span></h1>
+                    <h2 class="hero-subtitle">Third-year Computer Science Student</h2>
+                    <p class="hero-description">
+                        I am a dedicated Computer Science student at the University of Macau with passion for data analysis, 
+                        machine learning, and software development. My consistent academic effort has been recognized with 
+                        inclusion on the Faculty's Dean's Honor List twice.
+                    </p>
+                    <div class="btn-container">
+                        <a href="DC325629_LAMKAWAI_CV.pdf" class="btn btn-color-1" target="_blank">View My CV</a>
+                        <a href="#contact" class="btn btn-color-2">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="../images/image1.png" alt="Lam Ka Wai Profile Photo" class="profile-img" id="heroImg">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me 区域 (id="about") -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Learn more about my background and journey</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a third-year Computer Science student at the University of Macau, currently pursuing my degree with 
+                        focus on software development and data science. Through my coursework and projects, I have developed 
+                        strong problem-solving skills and technical expertise in various programming languages and frameworks.
+                    </p>
+                    <p>
+                        As a conscientious learner, I pay attention to detail and enjoy the process of solving problems step by step. 
+                        I work well in team environments and understand the importance of clear communication and asking questions. 
+                        I am actively seeking opportunities to apply my knowledge in real-world settings.
+                    </p>
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span class="info-value">Lam Ka Wai (林嘉威)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Age:</span>
+                            <span class="info-value">19 years</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Major:</span>
+                            <span class="info-value">Computer Science</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">University:</span>
+                            <span class="info-value">University of Macau</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status:</span>
+                            <span class="info-value">Third Year Student</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-images">
+                    <div class="image-gallery">
+                        <img src="../images/image5.png" alt="University Life" class="gallery-img">
+                        <img src="../images/image2.png" alt="Coding Project" class="gallery-img">
+                        <img src="../images/image3.png" alt="Basketball Activity" class="gallery-img">
+                        <img src="../images/image4.png" alt="Team Project" class="gallery-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Highlights 区域 (id="highlights") -->
+        <section id="highlights" class="highlights-section">
+            <div class="section-header">
+                <h2>Quick Highlights</h2>
+                <p>Key achievements and experiences</p>
+            </div>
+            <div class="highlights-grid about-containers">
+                <div class="highlight-card details-container color-container">
+                    <h3>Academic Excellence</h3>
+                    <p>Dean's Honor List (AY 2024/2025 & 2025/2026) at University of Macau</p>
+                </div>
+                <div class="highlight-card details-container color-container">
+                    <h3>Technical Projects</h3>
+                    <p>Developed IT job analysis system, big data architecture, and medical Q&A system</p>
+                </div>
+                <div class="highlight-card details-container color-container">
+                    <h3>Teaching Experience</h3>
+                    <p>Part-time tutor helping students understand complex technical concepts</p>
+                </div>
+                <div class="highlight-card details-container color-container">
+                    <h3>Extracurricular</h3>
+                    <p>Active basketball player, developing teamwork and strategic thinking skills</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience 區塊 (id="experience") -->
+        <section id="experience" style="padding: 5rem 0; background-color: white;">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <p>My work and academic project experience</p>
+            </div>
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+                <h3 style="margin-bottom: 1.5rem;">Work Experience</h3>
+                <div class="details-container" style="text-align: left; margin-bottom: 2rem;">
+                    <h3>Part-Time Tutor / Academic Assistant <span style="float:right; font-weight:normal;">2024 - Present</span></h3>
+                    <h4 style="font-weight:500; margin-bottom: 1rem;">Self-Employed</h4>
+                    <ul style="padding-left: 1.5rem;">
+                        <li>Structured complex problems into clear, logical steps to improve comprehension</li>
+                        <li>Strengthened ability to explain technical concepts clearly and methodically</li>
+                        <li>Assisted peers with coursework in programming, mathematics, and computer science fundamentals</li>
+                        <li>Developed customized learning materials based on individual student needs</li>
+                    </ul>
+                </div>
+                <h3 style="margin: 2rem 0 1.5rem;">Academic Projects</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="details-container color-container" style="text-align: left;">
+                        <h3>IT Job Market Analysis & Recommendation System</h3>
+                        <ul style="padding-left: 1.2rem; margin-top: 0.8rem;">
+                            <li>Built a data pipeline: developed a robust web scraper to collect IT job postings from LinkedIn across 6 countries</li>
+                            <li>Engineered data processing workflows for cleaning, feature extraction, and TF-IDF vectorization</li>
+                            <li>Implemented ranking algorithm to output Top 5 results based on user preferences</li>
+                            <li>Technologies: Python, BeautifulSoup, Pandas, Scikit-learn</li>
+                        </ul>
+                    </div>
+                    <div class="details-container color-container" style="text-align: left;">
+                        <h3>Big Data System Design for Career Guidance</h3>
+                        <ul style="padding-left: 1.2rem; margin-top: 0.8rem;">
+                            <li>Designed a scalable big data system architecture using Apache Spark for distributed processing</li>
+                            <li>Proposed a cloud-based pipeline from data ingestion to interactive dashboard visualization</li>
+                            <li>Analyzed processing requirements for large-scale job market data</li>
+                            <li>Technologies: Apache Spark, Hadoop, Cloud Computing concepts</li>
+                        </ul>
+                    </div>
+                    <div class="details-container color-container" style="text-align: left;">
+                        <h3>Medical Domain Q&A System with RAG & LLM</h3>
+                        <ul style="padding-left: 1.2rem; margin-top: 0.8rem;">
+                            <li>Built a Retrieval-Augmented Generation (RAG) system for specialized medical Q&A</li>
+                            <li>Deployed models locally via Ollama and orchestrated workflows with Dify</li>
+                            <li>Implemented document retrieval and response generation for medical queries</li>
+                            <li>Technologies: Python, Ollama, Dify, RAG architecture, LLMs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Demo 區塊 (id="projects") -->
+        <section id="projects" style="padding: 5rem 0; background-color: #fafafa;">
+            <div class="section-header">
+                <h2>Projects Demo</h2>
+                <p>Browse my recent demo projects</p>
+            </div>
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    <div class="details-container color-container" style="text-align: left;">
+                        <h3><a href="cisc3003-Member01-demo01.html">Product Details Page</a></h3>
+                        <p>Interactive product detail view with image gallery, size/quantity selection, and related products section.</p>
+                    </div>
+                    <div class="details-container color-container" style="text-align: left;">
+                        <h3><a href="">All Products Listing</a></h3>
+                        <p>Full product catalog with dynamic sorting (price/rating) and pagination for easy browsing.</p>
+                    </div>
+                    <div class="details-container color-container" style="text-align: left;">
+                        <h3><a href="">Demo Store (UrbanCart)</a></h3>
+                        <p>Main eCommerce landing page featuring hero banner, category grids, product showcases, and customer testimonials.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me 區塊 (id="contact") -->
+        <section id="contact" style="padding: 5rem 0; background-color: white;">
+            <div class="section-header">
+                <h2>Contact Me</h2>
+                <p>Get in touch for opportunities or just to connect</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+                <div class="details-container" style="text-align: left;">
+                    <h3>Get in Touch</h3>
+                    <p>Feel free to reach out for collaboration, internship opportunities, or just to connect!</p>
+                    <div style="margin-top: 1.5rem;">
+                        <div style="margin-bottom: 1.2rem;">
+                            <h4 style="margin-bottom: 0.2rem;">Email</h4>
+                            <p>Dgtdi45354@gmail.com</p>
+                        </div>
+                        <div style="margin-bottom: 1.2rem;">
+                            <h4 style="margin-bottom: 0.2rem;">Location</h4>
+                            <p>Macau SAR, China</p>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.2rem;">University</h4>
+                            <p>University of Macau, Faculty of Science and Technology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h3>Lam Ka Wai</h3>
+                <p>Computer Science Student</p>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="cisc3003-Member01-home.html">Home</a></li>
+                    <li><a href="cisc3003-Member01-profile.html">Profile</a></li>
+                    <li><a href="cisc3003-Member01-qualification.html">Qualification</a></li>
+                    <li><a href="cisc3003-Member01-showcase.html">Showcase</a></li>
+                    <li><a href="cisc3003-Member01-summary.html">Summary</a></li>  
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p>Email: Dgtdi45354@gmail.com</p>
+                <p>Location: Macau SAR</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>CISC3003 Web Programming - 2025: Student ID + Student Name DC325629 + LAM KA WAI</p>
+        </div>
+    </footer>
+
+    <script src="../js/cisc3003-Member01-home.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+/*=============================================
+  cisc3003-IndAssgn-demo01.css
+  Custom styles for the demo01 page
+=============================================*/
+
+@import url("styles.css");
+
+.demo-section {
+    padding: 60px 0;
+}
+
+.demo-title {
+    font-size: var(--h1-font-size);
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--title-color);
+}
+
+.demo-period {
+    text-align: center;
+    color: var(--text-color-light);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.demo-overview {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.demo-main-img {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px hsla(0, 0%, 0%, 0.1);
+}
+
+.demo-description {
+    flex: 1;
+    min-width: 300px;
+}
+
+.demo-description h2 {
+    margin-bottom: 15px;
+    color: var(--first-color);
+    font-size: var(--h2-font-size);
+}
+
+.demo-description p {
+    color: var(--text-color);
+}
+
+.demo-details h3 {
+    margin: 30px 0 15px;
+    color: var(--title-color);
+    font-size: var(--h3-font-size);
+    position: relative;
+    padding-left: 1rem;
+    border-left: 4px solid var(--first-color);
+}
+
+.demo-details ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.demo-details li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.demo-details li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--first-color);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tech-badge {
+    background-color: var(--body-color);
+    padding: 5px 15px;
+    border-radius: 2rem;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tech-badge:hover {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 1rem;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
+.demo-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.button-ghost {
+    background-color: transparent;
+    border: 2px solid var(--first-color);
+    color: var(--first-color);
+}
+
+.button-ghost:hover {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+.footer__copy em {
+    font-style: italic;
+    color: #aaa;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .demo-overview {
+        flex-direction: column;
+    }
+
+    .demo-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .demo-links .button {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
