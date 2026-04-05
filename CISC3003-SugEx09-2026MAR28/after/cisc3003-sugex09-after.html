@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>CISC3003 Suggested Exercise 09</title>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./js/misc.js"></script>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+
+<header class="header">  
+  <div class="header__wrapper">
+    <h1 class="header__heading">Art Store</h1>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__list-item"><a href="#" >Home</a></li>
+        <li class="navigation__list-item"><a href="#">About</a></li>
+        <li class="navigation__list-item"><a href="#">Art Works</a></li>
+        <li class="navigation__list-item"><a href="#">Artists</a></li>
+      </ul>
+    </nav>  
+  </div>
+</header>     
+<main>
+<form class="form" id="mainForm" method="post" action="art-process-after.php">
+   <fieldset class="form__panel">
+      <legend class="form__heading">Edit Art Work Details</legend>
+        <p class="form__row">
+           <label>Title</label><br/>
+           <input type="text" name="title" class="form__input form__input--large"/>
+       </p>
+       <p class="form__row">
+           <label>Description</label><br/>
+           <input type="text" name="description" class="form__input form__input--large">
+       </p>            
+       <p class="form__row"> 
+           <label>Genre</label><br/>
+           <select name="genre" class="form__input form__select">
+              <option>Choose genre</option> 
+              <option value="Abstract">Abstract</option><option value="Baroque">Baroque</option><option value="Gothic">Gothic</option><option value="Renaissance">Renaissance</option>           </select>
+       </p>
+       <p class="form__row"> 
+           <label>Subject</label><br/>
+           <select name="subject" class="form__input form__select">
+              <option>Choose subject</option> 
+              <option value="Animals">Animals</option><option value="Landscape">Landscape</option><option value="People">People</option>           </select>
+       </p>
+       <p class="form__row">	
+           <label>Medium</label><br/>               
+           <input type="text" name="medium" class="form__input form__input--medium" />
+       </p>
+       <p class="form__row">	
+           <label>Year</label><br/>               
+           <input type="text" name="year" class="form__input form__input--small" />
+       </p>  
+       <p class="form__row">	
+           <label>Museum</label><br/>               
+           <input type="text" name="museum" class="form__input form__input--medium"/>
+       </p>                             
+
+       <div class="form__box"> 
+          <input type="submit" class="form__btn"> <input type="reset" value="Clear Form" class="form__btn">      
+       </div>
+   </fieldset>
+</form>
+</main>       
+</body>
+</html>
