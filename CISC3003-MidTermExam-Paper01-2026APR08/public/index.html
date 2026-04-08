@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login & Sign Up Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <!-- 注册表单（不动） -->
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h2>Create Account</h2>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social"><i class="fa fa-google"></i></a>
+                    <a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Create Password" required>
+                <button>Sign Up</button>
+            </form>
+        </div>
+
+        <!-- 登录表单（不动） -->
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h2>Log in</h2>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social"><i class="fa fa-google"></i></a>
+                    <a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <a href="#">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+
+        <!-- 动画覆盖层 -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h2>Welcome Back!</h2>
+                    <!-- 👇 New image inserted here -->
+                    <img src="images/website_7376495.png" class="custom-profile-img" alt="">
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                
+                <div class="overlay-panel overlay-right">
+                    <h2>Welcome!</h2>
+                    <img src="images/unsecure_10399884.png" class="custom-blue-img" alt="">
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入独立的JS文件 -->
+    <script src="js/script.js"></script>
+</body>
+</html>
