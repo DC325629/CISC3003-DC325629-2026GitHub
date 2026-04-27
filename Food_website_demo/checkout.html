@@ -1,0 +1,31 @@
+<!-- 略 header / hero ... -->
+<section class="container">
+  <div data-order-success hidden></div>
+  <div class="panel-grid">
+    <!-- 左侧：购物车列表 -->
+    <section class="panel-card">
+      <div class="panel-card__header">
+        <div>
+          <p class="eyebrow">Cart summary</p>
+          <h2 class="title h2">Meals ready for pickup</h2>
+        </div>
+      </div>
+      <div class="empty-block" data-empty-state hidden>
+        <div class="message-card">
+          <h2>Your cart is empty</h2>
+          <div class="message-card__actions">
+            <button class="btn" type="button" data-seed-cart>Load demo cart</button>
+            <a class="btn btn--secondary" href="./cisc3003-PairAssgn.html">Back to menu</a>
+          </div>
+        </div>
+      </div>
+      <div class="summary-list" data-cart-items></div>
+      <div class="price-box">
+        <div class="price-line"><span>Subtotal</span><strong data-summary-subtotal>$0.00</strong></div>
+        <div class="price-line"><span>Service fee</span><strong data-summary-fee>$0.00</strong></div>
+        <div class="price-line price-line--total"><span>Total</span><strong data-summary-total>$0.00</strong></div>
+      </div>
+    </section>
+    <!-- 右侧表单略 -->
+  </div>
+</section>
