@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crispy Order Details</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/order-pages.css">
+</head>
+<body id="top" class="page-shell">
+  <header class="header active" data-header>
+    <div class="container">
+      <a href="./cisc3003-PairAssgn.html" class="logo">
+        <img src="./assets/images/logo.svg" width="130" height="45" alt="Crispy home">
+      </a>
+      <nav class="navbar active" data-navbar>
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="./cisc3003-PairAssgn.html" class="navbar-link">Home</a></li>
+          <li class="navbar-item"><a href="./checkout.html" class="navbar-link">Checkout</a></li>
+          <li class="navbar-item"><a href="./orders.html" class="navbar-link">Orders</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-kicker">Order details</p>
+        <h1 class="title h1 page-title">One order, full breakdown.</h1>
+        <p class="page-description">
+          Inspect the line items, pickup arrangement, payment mode, and customer note from a single dedicated detail page.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="./orders.html">Back to history</a>
+          <a class="btn btn--secondary" href="./checkout.html">Create another order</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" data-order-details></section>
+  </main>
+
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/order-store.js"></script>
+  <script src="./assets/js/order-details.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

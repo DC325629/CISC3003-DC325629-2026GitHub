@@ -1,0 +1,228 @@
+/* ================================
+   Login, Register, Logout, Forgot
+   ================================ */
+
+.auth-container {
+    max-width: 500px;
+    margin: 160px auto 80px;
+    background: var(--bg-white);
+    border-radius: 28px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.auth-title {
+    font-family: var(--fontFamily-forum);
+    font-size: 2.5rem;
+    color: var(--text-sinopia);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid var(--border-platinum);
+    border-radius: 14px;
+    font-family: var(--fontFamily-opensans);
+    font-size: 1.5rem;
+    transition: var(--transition-1);
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--bg-sinopia);
+    box-shadow: 0 0 0 3px rgba(212, 155, 58, 0.1);
+}
+
+/* Login button - Orange border, transparent background */
+.btn-auth {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.5rem;
+    font-weight: var(--weight-semiBold);
+    border-radius: var(--radius-8);
+    transition: var(--transition-1);
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    color: var(--text-sinopia);
+    border: 2px solid var(--bg-sinopia);
+}
+
+.btn-auth:is(:hover, :focus-visible) {
+    background-color: var(--bg-sinopia);
+    color: var(--text-white);
+    transform: translateY(-2px);
+}
+
+/* Register button - Orange solid background */
+.btn-auth-register-page {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.5rem;
+    font-weight: var(--weight-semiBold);
+    border-radius: var(--radius-8);
+    transition: var(--transition-1);
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--bg-sinopia);
+    color: var(--text-white);
+    border: 2px solid var(--bg-sinopia);
+}
+
+.btn-auth-register-page:is(:hover, :focus-visible) {
+    background-color: var(--bg-rich-black-fogra-29);
+    border-color: var(--bg-rich-black-fogra-29);
+    transform: translateY(-2px);
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-granite-gray);
+}
+
+.auth-link a {
+    color: var(--text-sinopia);
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+.error-msg {
+    background: #ffe0e0;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success-msg {
+    background: #e0ffe0;
+    color: #2e7d32;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.password-hint {
+    font-size: 2rem;
+    color: var(--text-granite-gray);
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/* Logout page specific */
+.logout-container {
+    max-width: 450px;
+    margin: 160px auto 80px;
+    background: var(--bg-white);
+    border-radius: 28px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.logout-message {
+    margin: 20px 0;
+    color: var(--text-granite-gray);
+}
+
+.btn-logout-return {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--bg-sinopia);
+    color: var(--text-white);
+    border: 2px solid var(--bg-sinopia);
+    border-radius: var(--radius-8);
+    font-size: 1.5rem;
+    font-weight: var(--weight-semiBold);
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: var(--transition-1);
+}
+
+.btn-logout-return:is(:hover, :focus-visible) {
+    background-color: var(--bg-rich-black-fogra-29);
+    border-color: var(--bg-rich-black-fogra-29);
+    transform: translateY(-2px);
+}
+
+.reset-info {
+    background: var(--bg-isabelline);
+    padding: 16px;
+    border-radius: var(--radius-12);
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--text-rich-black-fogra-29);
+    font-size: 1.5rem;
+}
+
+.reset-info ion-icon {
+    font-size: 1.5rem;
+    color: var(--text-sinopia);
+    margin-bottom: 8px;
+}
+
+.back-to-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-login a {
+    color: var(--text-sinopia);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.back-to-login a:hover {
+    text-decoration: underline;
+}
+
+/* Password strength indicator for reset page */
+.password-strength {
+    margin-top: 8px;
+    font-size: 1.25rem;
+}
+
+.strength-bar {
+    height: 4px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+.strength-bar.weak { width: 33%; background: #c62828; }
+.strength-bar.medium { width: 66%; background: #ff9800; }
+.strength-bar.strong { width: 100%; background: #2e7d32; }
+
+@media screen and (max-width: 600px) {
+    .auth-container {
+        margin: 140px 20px 60px;
+        padding: 30px 20px;
+    }
+    
+    .logout-container {
+        margin: 100px 20px 60px;
+    }
+    
+    .auth-title {
+        font-size: 1.6rem;
+    }
+    
+    .form-group input {
+        padding: 12px 14px;
+    }
+}

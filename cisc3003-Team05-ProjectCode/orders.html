@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crispy Orders</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/order-pages.css">
+</head>
+<body id="top" class="page-shell">
+  <header class="header active" data-header>
+    <div class="container">
+      <a href="./cisc3003-PairAssgn.html" class="logo">
+        <img src="./assets/images/logo.svg" width="130" height="45" alt="Crispy home">
+      </a>
+      <nav class="navbar active" data-navbar>
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="./cisc3003-PairAssgn.html" class="navbar-link">Home</a></li>
+          <li class="navbar-item"><a href="./checkout.html" class="navbar-link">Checkout</a></li>
+          <li class="navbar-item"><a href="./orders.html" class="navbar-link">Orders</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-kicker">Order history</p>
+        <h1 class="title h1 page-title">Track recent reservations and reopen details.</h1>
+        <p class="page-description">
+          This page gives your module a dedicated history view with quick metrics, filtering, and direct navigation to a single order breakdown.
+        </p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="metric-grid">
+        <article class="metric-card">
+          <p>Total orders</p>
+          <strong data-order-count>0</strong>
+        </article>
+        <article class="metric-card">
+          <p>Total revenue</p>
+          <strong data-revenue-total>$0.00</strong>
+        </article>
+      </div>
+
+      <div class="toolbar">
+        <input type="search" placeholder="Search by code, date, or item" data-order-search>
+        <select data-status-filter>
+          <option value="all">All statuses</option>
+          <option value="confirmed">Confirmed</option>
+        </select>
+      </div>
+
+      <div class="empty-block" data-orders-empty hidden>
+        <div class="message-card">
+          <p class="eyebrow">No orders yet</p>
+          <h2>History becomes available after checkout</h2>
+          <p>Place a reservation from the checkout page, then return here to inspect the order lifecycle.</p>
+          <div class="message-card__actions">
+            <a class="btn" href="./checkout.html">Go to checkout</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="history-grid" data-orders-list></div>
+    </section>
+  </main>
+
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/order-store.js"></script>
+  <script src="./assets/js/orders.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

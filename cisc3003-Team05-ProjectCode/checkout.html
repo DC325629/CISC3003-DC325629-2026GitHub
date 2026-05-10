@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crispy Checkout</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/order-pages.css">
+</head>
+<body id="top" class="page-shell">
+  <header class="header active" data-header>
+    <div class="container">
+      <a href="./cisc3003-PairAssgn.html" class="logo">
+        <img src="./assets/images/logo.svg" width="130" height="45" alt="Crispy home">
+      </a>
+      <nav class="navbar active" data-navbar>
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="./cisc3003-PairAssgn.html" class="navbar-link">Home</a></li>
+          <li class="navbar-item"><a href="./checkout.html" class="navbar-link">Checkout</a></li>
+          <li class="navbar-item"><a href="./orders.html" class="navbar-link">Orders</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-kicker">Wang Yufeng module</p>
+        <h1 class="title h1 page-title">Checkout flow with slot validation.</h1>
+        <p class="page-description">
+          Review the cart, choose a pickup time, and place a reservation-ready order. The slot grid enforces remaining capacity and clears the cart after confirmation.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="./orders.html">Open history</a>
+          <button class="btn btn--secondary" type="button" data-seed-cart>Reload demo cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div data-order-success hidden></div>
+      <div class="panel-grid">
+        <section class="panel-card">
+          <div class="panel-card__header">
+            <div>
+              <p class="eyebrow">Cart summary</p>
+              <h2 class="title h2">Meals ready for pickup</h2>
+            </div>
+          </div>
+          <div class="empty-block" data-empty-state hidden>
+            <div class="message-card">
+              <h2>Your cart is empty</h2>
+              <p>Load the demo cart or return to the menu page to continue.</p>
+              <div class="message-card__actions">
+                <button class="btn" type="button" data-seed-cart>Load demo cart</button>
+                <a class="btn btn--secondary" href="./cisc3003-PairAssgn.html">Back to menu</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary-list" data-cart-items></div>
+          <div class="price-box">
+            <div class="price-line"><span>Subtotal</span><strong data-summary-subtotal>$0.00</strong></div>
+            <div class="price-line"><span>Service fee</span><strong data-summary-fee>$0.00</strong></div>
+            <div class="price-line price-line--total"><span>Total</span><strong data-summary-total>$0.00</strong></div>
+          </div>
+        </section>
+
+        <section class="panel-card">
+          <p class="eyebrow">Pickup arrangement</p>
+          <h2 class="title h2">Place your order</h2>
+          <form class="field-grid" data-checkout-form>
+            <label class="field-label">
+              Student name
+              <input type="text" name="customerName" placeholder="Wang Yufeng" required>
+            </label>
+            <label class="field-label">
+              Contact number
+              <input type="tel" name="phone" placeholder="+853 6000 1234" required>
+            </label>
+            <label class="field-label">
+              Pickup date
+              <input id="pickupDate" type="date" name="pickupDate" required>
+            </label>
+            <label class="field-label">
+              Payment method
+              <select name="paymentMethod">
+                <option>Pay at pickup</option>
+                <option>Campus wallet</option>
+                <option>Cash</option>
+              </select>
+            </label>
+            <div class="field-label" style="grid-column: 1 / -1;">
+              Pickup slot
+              <div class="slot-grid" data-slot-grid></div>
+            </div>
+            <label class="field-label" style="grid-column: 1 / -1;">
+              Note for canteen staff
+              <textarea name="note" placeholder="Less spicy, extra tissue, no onion..."></textarea>
+            </label>
+            <p class="form-message" data-slot-error></p>
+            <div class="hero-actions" style="grid-column: 1 / -1;">
+              <button class="btn" type="submit" data-submit-order>Confirm order</button>
+              <a class="btn btn--secondary" href="./orders.html">View history instead</a>
+            </div>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/order-store.js"></script>
+  <script src="./assets/js/checkout.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
