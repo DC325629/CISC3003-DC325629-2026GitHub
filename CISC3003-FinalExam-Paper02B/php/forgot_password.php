@@ -41,7 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Username   = 'CrispyTeam05@gmail.com';
             $mail->Password   = 'vrxixiokfkwqdmyn';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 587;
+            $mail->Port = 465;
+            $mail->SMTPSecure = 'ssl'; 
 
             $mail->setFrom('CrispyTeam05@gmail.com', 'CISC3003 Security');
             $mail->addAddress($email);
