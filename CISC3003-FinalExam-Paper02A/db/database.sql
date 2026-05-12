@@ -1,14 +1,13 @@
-CREATE DATABASE IF NOT EXISTS paper02_c;
-USE paper02_c;
+CREATE DATABASE IF NOT EXISTS paper02_a;
+USE paper02_a;
 
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    password_hash VARCHAR(255) NOT NULL,
-    account_activation_hash VARCHAR(64) DEFAULT NULL,
-    is_active BOOLEAN DEFAULT 0,
-    reset_token_hash VARCHAR(64) DEFAULT NULL,
-    reset_token_expires_at DATETIME DEFAULT NULL,
+    fullname VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    gender ENUM('Male', 'Female', 'Other') NOT NULL,
+    country VARCHAR(50) NOT NULL,
+    interests VARCHAR(255) NOT NULL,
+    bio TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
